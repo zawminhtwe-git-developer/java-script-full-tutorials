@@ -115,12 +115,28 @@ This is multiline comment line
 // ***********************day six start********************************************
 //const = "data type တစ်မျိုးကို ပြောင်းလဲလို့မရအောင်တားဆီးထားခြင်းဖြစ်ပါသည်။"
 
-const PI = 3.14159;
-let radius;
-let circumference;
+// const PI = 3.14159;
+// let radius;
+// let circumference;
 
-radius = window.prompt("Enter the radius of a circle");
-radius = Number(radius);
+// radius = window.prompt("Enter the radius of a circle");
+// radius = Number(radius);
 
-circumference = 2* PI * radius;
-console.log("The curcumference is: ", circumference);
+// circumference = 2* PI * radius;
+// console.log("The curcumference is: ", circumference);
+
+
+// ***********************day seven start********************************************
+let x = 3; 
+let y = 4; 
+let z = 5; 
+//x= Math.round(x); // ငါးထက်ကျော်ရင် ၄ယူတယ် မကျော်ရင် ၃ ယူတယ်
+//x= Math.floor(x); // အောက်ကို ချယူ
+//x= Math.ceil(x); // အပေါ်ကို တိုးယူ
+// x = Math.pow(x,2);
+// x = Math.sqrt(x);
+// x= Math.abs(x);
+x = Math.PI;
+x = Math.max(x,y,z);
+x = Math.min(x,y,z);
+console.log(x);
