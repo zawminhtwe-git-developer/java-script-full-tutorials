@@ -77,14 +77,38 @@ This is multiline comment line
 
 // ***********************day four start*********************************************
 // easy waywith a window prompt
-let username = window.prompt("What is your name");
-console.log(username);
+// let username = window.prompt("What is your name");
+// console.log(username);
 
-// dificult way with textbox
+// // dificult way with textbox
 
-let username1;
-document.getElementById("button").onclick = function() {
-    username = document.getElementById("name").value;
-    console.log(username);
-    document.getElementById("label").innerHTML = "Hello" + username1;
-}
+// let username1;
+// document.getElementById("button").onclick = function() {
+//     username = document.getElementById("name").value;
+//     console.log(username);
+//     document.getElementById("label").innerHTML = "Hello" + username1;
+// }
+
+
+// ***********************day five start********************************************
+// Type Conversion = change the datatype of a value to another(strings, numbers, booleans)
+let age = window.prompt("How old are you?");
+
+console.log(typeof age);
+age = Number(age);
+age += 1;
+console.log(age);
+
+
+
+
+let x,y,z;
+
+x = Number("3.14");
+y=String(3.14);
+z= Boolean("12");
+
+console.log(x,typeof x);
+console.log(y,typeof y);
+console.log(z,typeof z);
+
