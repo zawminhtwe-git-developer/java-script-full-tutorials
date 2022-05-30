@@ -179,20 +179,33 @@ console.log(c);
 // }
 
 // ***********************day nine start********************************************
-let count = 0;
-let price = 30000;
+// let count = 0;
+// let price = 30000;
 
-document.getElementById("decrease").onclick = function(){
-    count -= 1;
-    document.getElementById("value").innerHTML = count * price;
-}
+// document.getElementById("decrease").onclick = function(){
+//     count -= 1;
+//     document.getElementById("value").innerHTML = count * price;
+// }
 
-document.getElementById("increase").onclick= function(){
-    count +=1;
-    document.getElementById("value").innerHTML = count * price;
-}
+// document.getElementById("increase").onclick= function(){
+//     count +=1;
+//     document.getElementById("value").innerHTML = count * price;
+// }
 
-document.getElementById("reset").onclick = function(){
-    count =0;
-    document.getElementById("value").innerHTML = count * price;
+// document.getElementById("reset").onclick = function(){
+//     count =0;
+//     document.getElementById("value").innerHTML = count * price;
+// }
+// ***********************day ten start********************************************
+
+let x,y,z;
+
+document.getElementById("btn").onclick = function(){
+    x = Math.floor(Math.random() * 6) + 1;
+    y = Math.floor(Math.random() * 6) + 1;
+    z = Math.floor(Math.random() * 6) + 1;
+
+    document.getElementById("x").innerHTML = x;
+    document.getElementById("y").innerHTML = y;
+    document.getElementById("z").innerHTML = z;
 }
