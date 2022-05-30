@@ -92,23 +92,35 @@ This is multiline comment line
 
 // ***********************day five start********************************************
 // Type Conversion = change the datatype of a value to another(strings, numbers, booleans)
-let age = window.prompt("How old are you?");
+// let age = window.prompt("How old are you?");
 
-console.log(typeof age);
-age = Number(age);
-age += 1;
-console.log(age);
-
-
+// console.log(typeof age);
+// age = Number(age);
+// age += 1;
+// console.log(age);
 
 
-let x,y,z;
 
-x = Number("3.14");
-y=String(3.14);
-z= Boolean("12");
 
-console.log(x,typeof x);
-console.log(y,typeof y);
-console.log(z,typeof z);
+// let x,y,z;
 
+// x = Number("3.14");
+// y=String(3.14);
+// z= Boolean("12");
+
+// console.log(x,typeof x);
+// console.log(y,typeof y);
+// console.log(z,typeof z);
+
+// ***********************day six start********************************************
+//const = "data type တစ်မျိုးကို ပြောင်းလဲလို့မရအောင်တားဆီးထားခြင်းဖြစ်ပါသည်။"
+
+const PI = 3.14159;
+let radius;
+let circumference;
+
+radius = window.prompt("Enter the radius of a circle");
+radius = Number(radius);
+
+circumference = 2* PI * radius;
+console.log("The curcumference is: ", circumference);
