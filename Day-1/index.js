@@ -160,20 +160,39 @@ console.log(b);
 console.log(c);
 */
 
-document.getElementById("submitButton").onclick = function(){
+// document.getElementById("submitButton").onclick = function(){
 
-    a = document.getElementById("a_value").value;
-    a = Number(a);
+//     a = document.getElementById("a_value").value;
+//     a = Number(a);
     
-    b = document.getElementById("b_value").value;
-    b = Number(b);
+//     b = document.getElementById("b_value").value;
+//     b = Number(b);
     
-    a = Math.pow(a,2);
-    b = Math.pow(b,2);
-    c = Math.sqrt(a+b);
+//     a = Math.pow(a,2);
+//     b = Math.pow(b,2);
+//     c = Math.sqrt(a+b);
 
-    console.log(c);
+//     console.log(c);
 
-    document.getElementById("c_value").innerHTML = "The Answer is :" + c;
+//     document.getElementById("c_value").innerHTML = "The Answer is :" + c;
 
+// }
+
+// ***********************day nine start********************************************
+let count = 0;
+let price = 30000;
+
+document.getElementById("decrease").onclick = function(){
+    count -= 1;
+    document.getElementById("value").innerHTML = count * price;
+}
+
+document.getElementById("increase").onclick= function(){
+    count +=1;
+    document.getElementById("value").innerHTML = count * price;
+}
+
+document.getElementById("reset").onclick = function(){
+    count =0;
+    document.getElementById("value").innerHTML = count * price;
 }
