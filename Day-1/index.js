@@ -198,14 +198,29 @@ console.log(c);
 // }
 // ***********************day ten start********************************************
 
-let x,y,z;
+// let x,y,z;
 
-document.getElementById("btn").onclick = function(){
-    x = Math.floor(Math.random() * 6) + 1;
-    y = Math.floor(Math.random() * 6) + 1;
-    z = Math.floor(Math.random() * 6) + 1;
+// document.getElementById("btn").onclick = function(){
+//     x = Math.floor(Math.random() * 6) + 1;
+//     y = Math.floor(Math.random() * 6) + 1;
+//     z = Math.floor(Math.random() * 6) + 1;
 
-    document.getElementById("x").innerHTML = x;
-    document.getElementById("y").innerHTML = y;
-    document.getElementById("z").innerHTML = z;
-}
+//     document.getElementById("x").innerHTML = x;
+//     document.getElementById("y").innerHTML = y;
+//     document.getElementById("z").innerHTML = z;
+// }
+// ***********************day elevel start********************************************
+let userName = "    Zaw Min Htwe";
+let phone = "096-611-146-60"
+userName.length;
+userName.charAt(0);
+// userName = userName.indexOf("w");
+// userName = userName.lastIndexOf("w");
+userName = userName.trim();
+userName= userName.toUpperCase();
+userName= userName.toLowerCase();
+
+phoneNumber = phone.replace("-","");
+phoneNumber = phone.replaceAll("-","");
+console.log(phoneNumber)
+console.log(userName);
