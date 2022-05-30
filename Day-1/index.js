@@ -127,16 +127,53 @@ This is multiline comment line
 
 
 // ***********************day seven start********************************************
-let x = 3; 
-let y = 4; 
-let z = 5; 
-//x= Math.round(x); // ငါးထက်ကျော်ရင် ၄ယူတယ် မကျော်ရင် ၃ ယူတယ်
-//x= Math.floor(x); // အောက်ကို ချယူ
-//x= Math.ceil(x); // အပေါ်ကို တိုးယူ
-// x = Math.pow(x,2);
-// x = Math.sqrt(x);
-// x= Math.abs(x);
-x = Math.PI;
-x = Math.max(x,y,z);
-x = Math.min(x,y,z);
-console.log(x);
+// let x = 3; 
+// let y = 4; 
+// let z = 5; 
+// //x= Math.round(x); // ငါးထက်ကျော်ရင် ၄ယူတယ် မကျော်ရင် ၃ ယူတယ်
+// //x= Math.floor(x); // အောက်ကို ချယူ
+// //x= Math.ceil(x); // အပေါ်ကို တိုးယူ
+// // x = Math.pow(x,2);
+// // x = Math.sqrt(x);
+// // x= Math.abs(x);
+// x = Math.PI;
+// x = Math.max(x,y,z);
+// x = Math.min(x,y,z);
+// console.log(x);
+
+// ***********************day eight start********************************************
+//c = root a square + b square formular
+
+/*let c,a,b;
+a = window.prompt("Type of your number A :");
+a = Number(a);
+
+b = window.prompt("Type of your number B :");
+b = Number(b);
+
+a = Math.pow(a,2);
+b = Math.pow(b,2);
+c = Math.sqrt(a+b);
+
+console.log(a);
+console.log(b);
+console.log(c);
+*/
+
+document.getElementById("submitButton").onclick = function(){
+
+    a = document.getElementById("a_value").value;
+    a = Number(a);
+    
+    b = document.getElementById("b_value").value;
+    b = Number(b);
+    
+    a = Math.pow(a,2);
+    b = Math.pow(b,2);
+    c = Math.sqrt(a+b);
+
+    console.log(c);
+
+    document.getElementById("c_value").innerHTML = "The Answer is :" + c;
+
+}
