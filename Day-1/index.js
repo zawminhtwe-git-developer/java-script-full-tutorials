@@ -246,13 +246,38 @@ console.log(c);
 
 // ***********************day thirteen start********************************************
 
-let age = 16;
-if(age>=60){
-    console.log("You are a senior citizen");
-}else if(age>=18){
-    console.log("You are adult");
-}else if(age<=0){
-    console.log("You are not born yet");
- }else{
-    console.log("You are child")
+// let age = 16;
+// if(age>=60){
+//     console.log("You are a senior citizen");
+// }else if(age>=18){
+//     console.log("You are adult");
+// }else if(age<=0){
+//     console.log("You are not born yet");
+//  }else{
+//     console.log("You are child")
+// }
+// ***********************day fourteen start********************************************
+document.getElementById("submit").onclick = function(){
+    const check = document.getElementById("check");
+
+    if(check.checked){
+        console.log("You are subscribed");
+    }else{
+        console.log("You are not subscribed");
+    }
+}
+
+
+document.getElementById("card").onclick = function(){
+    const kbz = document.getElementById("kbz");
+    const aya = document.getElementById("aya");
+    const yoma = document.getElementById("yoma");
+
+    if(kbz.checked){
+        console.log("You are paying with kbz");
+    }else if(aya.checked){
+        console.log("You are paying with aya");
+    }else if(yoma){
+        console.log("You are paying with yoma");
+    }
 }
