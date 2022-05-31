@@ -327,10 +327,23 @@ console.log(c);
 // }
 
 // ***********************day eighteen start********************************************
-for(let i =1;i<=20;i+=1){
-    if(i==13){
-        break;//ဆိုတာဟာ ၁၃ နဲ့ညီသွားရင် အလုပ်မလုပ်တော့ပါ
-        continue; //ဆိုတာဟာ ၁၃ မပါပဲ ဆက်လုပ်ပါတယ်
+// for(let i =1;i<=20;i+=1){
+//     if(i==13){
+//         break;//ဆိုတာဟာ ၁၃ နဲ့ညီသွားရင် အလုပ်မလုပ်တော့ပါ
+//         continue; //ဆိုတာဟာ ၁၃ မပါပဲ ဆက်လုပ်ပါတယ်
+//     }
+//     console.log(i);
+// }
+
+
+// ***********************day nineteen start********************************************
+let symbol = window.prompt("Enterr a symbol to use");
+let rows = window.prompt("Enter  #  of rows");
+let columns = window.prompt("Enter  #  of columns");
+
+for(let i = 1; i<=rows;i+=1){
+    for(let j=1 ;j <=columns;j+=1){
+     document.getElementById("myRectangle").innerHTML += symbol;   
     }
-    console.log(i);
+    document.getElementById("myRectangle").innerHTML += "<br>";
 }
