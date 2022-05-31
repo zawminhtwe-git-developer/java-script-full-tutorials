@@ -321,7 +321,16 @@ console.log(c);
 //     code block to be executed
 //   }
 
-let i = 5;
-for(i;i<=100;i+=1){
-    console.log(i)
+// let i = 5;
+// for(i;i<=100;i+=1){
+//     console.log(i)
+// }
+
+// ***********************day eighteen start********************************************
+for(let i =1;i<=20;i+=1){
+    if(i==13){
+        break;//ဆိုတာဟာ ၁၃ နဲ့ညီသွားရင် အလုပ်မလုပ်တော့ပါ
+        continue; //ဆိုတာဟာ ၁၃ မပါပဲ ဆက်လုပ်ပါတယ်
+    }
+    console.log(i);
 }
