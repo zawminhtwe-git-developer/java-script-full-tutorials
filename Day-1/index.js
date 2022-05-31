@@ -349,24 +349,44 @@ console.log(c);
 // }
 
 // ***********************day twenty start********************************************
-let userName="Zaw Min Htwe" // gloal variable
+// let userName="Zaw Min Htwe" // gloal variable
 
-zmh();
-getInfo();
+// zmh();
+// getInfo();
 
-function zmh(){
-    console.log(userName);
-}
+// function zmh(){
+//     console.log(userName);
+// }
 
-function getInfo(){
-   let userName ="Naung Naung";//local variable
-   let age = 32;
+// function getInfo(){
+//    let userName ="Naung Naung";//local variable
+//    let age = 32;
 
-    showInfo(userName,age);
-}
+//     showInfo(userName,age);
+// }
 
-function showInfo(a,b){
-    console.log("Your name is :",a);
-    console.log("Your age is :",b);
+// function showInfo(a,b){
+//     console.log("Your name is :",a);
+//     console.log("Your age is :",b);
 
+// }
+
+// ***********************day twenty-one start********************************************
+let area;
+let width;
+let height;
+
+width = window.prompt("Enterr width");
+width=Number(width);
+height = window.prompt("Enterr height");
+height = Number(height)
+
+
+
+area = getArea(width , height);
+
+console.log("The area is :",area);
+
+function getArea(width,height){
+    return width * height;
 }
