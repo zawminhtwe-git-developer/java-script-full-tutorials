@@ -210,17 +210,35 @@ console.log(c);
 //     document.getElementById("z").innerHTML = z;
 // }
 // ***********************day elevel start********************************************
-let userName = "    Zaw Min Htwe";
-let phone = "096-611-146-60"
-userName.length;
-userName.charAt(0);
-// userName = userName.indexOf("w");
-// userName = userName.lastIndexOf("w");
-userName = userName.trim();
-userName= userName.toUpperCase();
-userName= userName.toLowerCase();
+// let userName = "    Zaw Min Htwe";
+// let phone = "096-611-146-60"
+// userName.length;
+// userName.charAt(0);
+// // userName = userName.indexOf("w");
+// // userName = userName.lastIndexOf("w");
+// userName = userName.trim();
+// userName= userName.toUpperCase();
+// userName= userName.toLowerCase();
 
-phoneNumber = phone.replace("-","");
-phoneNumber = phone.replaceAll("-","");
-console.log(phoneNumber)
-console.log(userName);
+// phoneNumber = phone.replace("-","");
+// phoneNumber = phone.replaceAll("-","");
+// console.log(phoneNumber)
+// console.log(userName);
+
+// ***********************day twelve start********************************************
+let fullName ="Zaw Min Htwe";
+let firstName;
+let lastName;
+
+// firstName= fullName.slice(0,3);
+// lastName= fullName.slice(4);
+
+// console.log(firstName)
+// console.log(lastName)
+
+firstName= fullName.slice(0,fullName.indexOf(" "));
+lastName= fullName.slice(fullName.indexOf(" ")+1);
+
+
+console.log(firstName)
+console.log(lastName)
