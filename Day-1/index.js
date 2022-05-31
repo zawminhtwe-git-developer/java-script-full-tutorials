@@ -308,8 +308,10 @@ console.log(c);
 //         console.log(grade,"It is not a letter grade");
 // }
 // ***********************day sixteen start********************************************
+// ကိုယ်စစ်ထားတဲ့ ဟာမှားနေရင်တောင် ပထမ တစ်ခါတော့ အလုပ်လုပ်ပေးသည်။
+
 let userName = "";
-while(userName == "" || userName == null){
+do{
     userName = window.prompt("Enter your name");
-}
+}while(userName == "")
 console.log("Hello ",userName);
