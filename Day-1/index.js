@@ -226,19 +226,33 @@ console.log(c);
 // console.log(userName);
 
 // ***********************day twelve start********************************************
-let fullName ="Zaw Min Htwe";
-let firstName;
-let lastName;
+// let fullName ="zaw Min Htwe";
+// let firstName;
+// let lastName;
 
-// firstName= fullName.slice(0,3);
-// lastName= fullName.slice(4);
+// // firstName= fullName.slice(0,3);
+// // lastName= fullName.slice(4);
+
+// // console.log(firstName)
+// // console.log(lastName)
+
+// firstName= fullName.slice(0,fullName.indexOf(" ")).charAt("0").toUpperCase();
+// lastName= fullName.slice(fullName.indexOf(" ")+1);
+
 
 // console.log(firstName)
 // console.log(lastName)
 
-firstName= fullName.slice(0,fullName.indexOf(" "));
-lastName= fullName.slice(fullName.indexOf(" ")+1);
 
+// ***********************day thirteen start********************************************
 
-console.log(firstName)
-console.log(lastName)
+let age = 16;
+if(age>=60){
+    console.log("You are a senior citizen");
+}else if(age>=18){
+    console.log("You are adult");
+}else if(age<=0){
+    console.log("You are not born yet");
+ }else{
+    console.log("You are child")
+}
