@@ -257,27 +257,53 @@ console.log(c);
 //     console.log("You are child")
 // }
 // ***********************day fourteen start********************************************
-document.getElementById("submit").onclick = function(){
-    const check = document.getElementById("check");
+// document.getElementById("submit").onclick = function(){
+//     const check = document.getElementById("check");
 
-    if(check.checked){
-        console.log("You are subscribed");
-    }else{
-        console.log("You are not subscribed");
-    }
-}
+//     if(check.checked){
+//         console.log("You are subscribed");
+//     }else{
+//         console.log("You are not subscribed");
+//     }
+// }
 
 
-document.getElementById("card").onclick = function(){
-    const kbz = document.getElementById("kbz");
-    const aya = document.getElementById("aya");
-    const yoma = document.getElementById("yoma");
+// document.getElementById("card").onclick = function(){
+//     const kbz = document.getElementById("kbz");
+//     const aya = document.getElementById("aya");
+//     const yoma = document.getElementById("yoma");
 
-    if(kbz.checked){
-        console.log("You are paying with kbz");
-    }else if(aya.checked){
-        console.log("You are paying with aya");
-    }else if(yoma){
-        console.log("You are paying with yoma");
-    }
+//     if(kbz.checked){
+//         console.log("You are paying with kbz");
+//     }else if(aya.checked){
+//         console.log("You are paying with aya");
+//     }else if(yoma){
+//         console.log("You are paying with yoma");
+//     }
+// }
+
+// ***********************day fifteen start********************************************
+
+let grade = 0;
+switch(true){
+    case grade >= 90:
+        console.log("You did great!");
+        break;
+    case grade >= 80:
+        console.log("You did good!");
+        break;
+    case grade >= 70:
+        console.log("You did ok!");
+        break;
+    case grade >= 60:
+        console.log("You did barely!");
+        break;
+    case grade >= 40:
+        console.log("You did pass!");
+        break;
+    case grade <= 40:
+        console.log("You did fail!");
+        break;
+    default:
+        console.log(grade,"It is not a letter grade");
 }
