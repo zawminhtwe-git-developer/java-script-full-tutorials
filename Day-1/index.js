@@ -337,13 +337,36 @@ console.log(c);
 
 
 // ***********************day nineteen start********************************************
-let symbol = window.prompt("Enterr a symbol to use");
-let rows = window.prompt("Enter  #  of rows");
-let columns = window.prompt("Enter  #  of columns");
+// let symbol = window.prompt("Enterr a symbol to use");
+// let rows = window.prompt("Enter  #  of rows");
+// let columns = window.prompt("Enter  #  of columns");
 
-for(let i = 1; i<=rows;i+=1){
-    for(let j=1 ;j <=columns;j+=1){
-     document.getElementById("myRectangle").innerHTML += symbol;   
-    }
-    document.getElementById("myRectangle").innerHTML += "<br>";
+// for(let i = 1; i<=rows;i+=1){
+//     for(let j=1 ;j <=columns;j+=1){
+//      document.getElementById("myRectangle").innerHTML += symbol;   
+//     }
+//     document.getElementById("myRectangle").innerHTML += "<br>";
+// }
+
+// ***********************day twenty start********************************************
+let userName="Zaw Min Htwe" // gloal variable
+
+zmh();
+getInfo();
+
+function zmh(){
+    console.log(userName);
+}
+
+function getInfo(){
+   let userName ="Naung Naung";//local variable
+   let age = 32;
+
+    showInfo(userName,age);
+}
+
+function showInfo(a,b){
+    console.log("Your name is :",a);
+    console.log("Your age is :",b);
+
 }
