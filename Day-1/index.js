@@ -284,26 +284,32 @@ console.log(c);
 
 // ***********************day fifteen start********************************************
 
-let grade = 0;
-switch(true){
-    case grade >= 90:
-        console.log("You did great!");
-        break;
-    case grade >= 80:
-        console.log("You did good!");
-        break;
-    case grade >= 70:
-        console.log("You did ok!");
-        break;
-    case grade >= 60:
-        console.log("You did barely!");
-        break;
-    case grade >= 40:
-        console.log("You did pass!");
-        break;
-    case grade <= 40:
-        console.log("You did fail!");
-        break;
-    default:
-        console.log(grade,"It is not a letter grade");
+// let grade = 0;
+// switch(true){
+//     case grade >= 90:
+//         console.log("You did great!");
+//         break;
+//     case grade >= 80:
+//         console.log("You did good!");
+//         break;
+//     case grade >= 70:
+//         console.log("You did ok!");
+//         break;
+//     case grade >= 60:
+//         console.log("You did barely!");
+//         break;
+//     case grade >= 40:
+//         console.log("You did pass!");
+//         break;
+//     case grade <= 40:
+//         console.log("You did fail!");
+//         break;
+//     default:
+//         console.log(grade,"It is not a letter grade");
+// }
+// ***********************day sixteen start********************************************
+let userName = "";
+while(userName == "" || userName == null){
+    userName = window.prompt("Enter your name");
 }
+console.log("Hello ",userName);
