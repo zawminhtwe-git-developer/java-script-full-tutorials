@@ -310,8 +310,18 @@ console.log(c);
 // ***********************day sixteen start********************************************
 // ကိုယ်စစ်ထားတဲ့ ဟာမှားနေရင်တောင် ပထမ တစ်ခါတော့ အလုပ်လုပ်ပေးသည်။
 
-let userName = "";
-do{
-    userName = window.prompt("Enter your name");
-}while(userName == "")
-console.log("Hello ",userName);
+// let userName = "";
+// do{
+//     userName = window.prompt("Enter your name");
+// }while(userName == "")
+// console.log("Hello ",userName);
+
+// ***********************day seventeen start********************************************
+// for (statement 1; statement 2; statement 3) {
+//     code block to be executed
+//   }
+
+let i = 5;
+for(i;i<=100;i+=1){
+    console.log(i)
+}
