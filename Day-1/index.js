@@ -412,10 +412,20 @@ console.log(c);
 // ***********************day twenty-three start********************************************
 //(``) = allows embedded variables and expression
 
-let userName = window.prompt("Type your name?");
-let items = window.prompt("Type of Items * 350 Ks");
-let price = 350 * items;
+// let userName = window.prompt("Type your name?");
+// let items = window.prompt("Type of Items * 350 Ks");
+// let price = 350 * items;
 
-console.log(`Welcome to ${userName}`);
-console.log(`Your items is ${items}`);
-console.log(`Totally Amount ${price}`);
+// console.log(`Welcome to ${userName}`);
+// console.log(`Your items is ${items}`);
+// console.log(`Totally Amount ${price}`);
+
+// ***********************day twenty-four start********************************************
+let price = 100;
+// price= price.toLocaleString("en-US");
+// price= price.toLocaleString("hi-IN");
+// price= price.toLocaleString("de-DE");
+
+// price = price.toLocaleString("en-US",{style:"currency",currency:"USD"});
+price = price.toLocaleString(undefined,{style:"unit",unit:"celsius"});
+console.log(price);
