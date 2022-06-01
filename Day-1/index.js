@@ -399,12 +399,23 @@ console.log(c);
 // global variable = is declared outside any function
 // if global, var will change browser's window properties
 
-var name ="ZMH";
-doSomething();
+// var name ="ZMH";
+// doSomething();
 
-function doSomething(){
-    for(let i = 1; i<=3;i+=1){
-        console.log(i);
-    }
+// function doSomething(){
+//     for(let i = 1; i<=3;i+=1){
+//         console.log(i);
+//     }
    
-}
+// }
+
+// ***********************day twenty-three start********************************************
+//(``) = allows embedded variables and expression
+
+let userName = window.prompt("Type your name?");
+let items = window.prompt("Type of Items * 350 Ks");
+let price = 350 * items;
+
+console.log(`Welcome to ${userName}`);
+console.log(`Your items is ${items}`);
+console.log(`Totally Amount ${price}`);
