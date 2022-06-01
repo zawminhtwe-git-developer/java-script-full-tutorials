@@ -372,21 +372,39 @@ console.log(c);
 // }
 
 // ***********************day twenty-one start********************************************
-let area;
-let width;
-let height;
+// let area;
+// let width;
+// let height;
 
-width = window.prompt("Enterr width");
-width=Number(width);
-height = window.prompt("Enterr height");
-height = Number(height)
+// width = window.prompt("Enterr width");
+// width=Number(width);
+// height = window.prompt("Enterr height");
+// height = Number(height)
 
 
 
-area = getArea(width , height);
+// area = getArea(width , height);
 
-console.log("The area is :",area);
+// console.log("The area is :",area);
 
-function getArea(width,height){
-    return width * height;
+// function getArea(width,height){
+//     return width * height;
+// }
+
+// ***********************day twenty-two start********************************************
+// let = variables are limited to block scope{}
+// var = variables are limited to function(){}
+
+
+// global variable = is declared outside any function
+// if global, var will change browser's window properties
+
+var name ="ZMH";
+doSomething();
+
+function doSomething(){
+    for(let i = 1; i<=3;i+=1){
+        console.log(i);
+    }
+   
 }
