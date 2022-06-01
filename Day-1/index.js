@@ -421,11 +421,32 @@ console.log(c);
 // console.log(`Totally Amount ${price}`);
 
 // ***********************day twenty-four start********************************************
-let price = 100;
+// let price = 100;
 // price= price.toLocaleString("en-US");
 // price= price.toLocaleString("hi-IN");
 // price= price.toLocaleString("de-DE");
 
 // price = price.toLocaleString("en-US",{style:"currency",currency:"USD"});
-price = price.toLocaleString(undefined,{style:"unit",unit:"celsius"});
-console.log(price);
+// price = price.toLocaleString(undefined,{style:"unit",unit:"celsius"});
+// console.log(price);
+
+// ***********************day twenty-four start********************************************
+const answer = Math.floor(Math.random() *10 +1);
+console.log(answer)
+
+
+let guesses =0;
+document.getElementById("submitButton").onclick = function(){
+   let guess = document.getElementById("guessField").value;
+   guesses +=1;
+
+   if(guess == answer){
+       alert(`${answer} is the #.It took you ${guesses} guesses`);
+   }else if(guess < answer ){
+        alert("Too Small")
+   }else{
+       alert("Too Big")
+   }
+
+   document.getElementById("guessField").value="";
+}
