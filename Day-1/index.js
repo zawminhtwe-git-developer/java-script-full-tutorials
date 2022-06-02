@@ -431,22 +431,54 @@ console.log(c);
 // console.log(price);
 
 // ***********************day twenty-four start********************************************
-const answer = Math.floor(Math.random() *10 +1);
-console.log(answer)
+// const answer = Math.floor(Math.random() *10 +1);
+// console.log(answer)
 
 
-let guesses =0;
+// let guesses =0;
+// document.getElementById("submitButton").onclick = function(){
+//    let guess = document.getElementById("guessField").value;
+//    guesses +=1;
+
+//    if(guess == answer){
+//        alert(`${answer} is the #.It took you ${guesses} guesses`);
+//    }else if(guess < answer ){
+//         alert("Too Small")
+//    }else{
+//        alert("Too Big")
+//    }
+
+//    document.getElementById("guessField").value="";
+// }
+
+
+// ***********************day twenty-five start********************************************
 document.getElementById("submitButton").onclick = function(){
-   let guess = document.getElementById("guessField").value;
-   guesses +=1;
+    let temp;
+    if(document.getElementById("cButton").checked){
+        temp = document.getElementById("textBox").value;
+        temp = Number(temp);
+        temp = toCelsius(temp);
+        document.getElementById("tempLabel").innerHTML = temp + "°"
 
-   if(guess == answer){
-       alert(`${answer} is the #.It took you ${guesses} guesses`);
-   }else if(guess < answer ){
-        alert("Too Small")
-   }else{
-       alert("Too Big")
-   }
+    }else if(document.getElementById("fButton").checked){
+        temp = document.getElementById("textBox").value;
+        temp = Number(temp);
+        temp = toFahrenheit(temp);
+        document.getElementById("tempLabel").innerHTML = temp + "°"
+    }else{
+        document.getElementById("tempLabel").innerHTML = "Select a Unit"
+    }
+}
 
-   document.getElementById("guessField").value="";
+// let temp=27;
+// temp=toFahrenheit(temp);
+// console.log(temp);
+
+
+function toCelsius(temp){
+return (temp-32) *(5/9);
+}
+function toFahrenheit(temp){
+return temp *9 /5 +32;
 }
