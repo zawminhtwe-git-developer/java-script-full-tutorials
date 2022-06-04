@@ -486,7 +486,7 @@ console.log(c);
 // ***********************day twenty-six start********************************************
 // array think of it asavariable
 //that can store multiple values
-let fruits=["apple","orange","banana"];
+// let fruits=["apple","orange","banana"];
 // fruits[2]="coconut";
 // fruits.push("lemon");   // add an element
 // fruits.pop(); // removes last element.
@@ -495,19 +495,35 @@ let fruits=["apple","orange","banana"];
 
 
 
-var dogs = new Array("Bulldog","Beagle","Labrador","How to");
-for(var i = 0; i <= dogs.length; i++){
-    console.log(dogs[i]);
-    console.log(dogs.indexOf("Beagle"));
-}
-let prices =[5,10,15,20,25];
-for(let price of prices){
-    console.log(price);
-}
+// var dogs = new Array("Bulldog","Beagle","Labrador","How to");
+// for(var i = 0; i <= dogs.length; i++){
+//     console.log(dogs[i]);
+//     console.log(dogs.indexOf("Beagle"));
+// }
+
+// let prices =[5,10,15,20,25];
+// console.log(prices.sort());
+// console.log(prices.sort().reverse());
+// for(let price of prices){
+//     console.log(price);
+// }
 
 // console.log(dogs[0]);
 // console.log(fruits);
-                          
-                            
-                               
+         
+
+// ***********************day twenty-seven start********************************************                        
+//2D array = An array of arrays
+let fruits = ["apples","oranges","bananas"];
+let vegetables =["carrots","onions","potatoes"];
+let meats=["eggs","chicken","fish"];
+
+let groceryList=[fruits,vegetables,meats];     
+groceryList[1][1] = "steak";// replace with row and colunm
+for(let list of groceryList){
+    // console.log(list)
+    for(let food of list){
+        console.log(food);
+    }
+}
                           
