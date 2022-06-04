@@ -591,18 +591,49 @@ console.log(c);
 
 // ***********************day thirty-one start********************************************                        
 
-let students = ["aung","naung","zaw min htwe","thaw zin htun"];
+// let students = ["aung","naung","zaw min htwe","thaw zin htun"];
 
-students.forEach(capitalize)
-students.forEach(print)
+// students.forEach(capitalize)
+// students.forEach(print)
 
-function capitalize(element,index,array){
-    array[index]=element[0].toUpperCase() + element.substring(1);
+// function capitalize(element,index,array){
+//     array[index]=element[0].toUpperCase() + element.substring(1);
 
-}
+// }
+
+// function print(element){
+//     console.log(element)
+// }
+
+// console.log(students);
+
+// ***********************day thirty-two start********************************************                        
+//array.map() = executes a provided callback function once for each array element And creates a new array
+// let numbers =[1,2,3,4,5,6,7,8,9];
+// let squares = numbers.map(square);
+
+// squares.forEach(print);
+
+// function square(element){
+//   try {
+//     return Math.pow(element,2);
+//   } catch (error) {
+//       console.log(error)
+//   }
+// }
 
 function print(element){
-    console.log(element)
+    console.log(element);
 }
 
-console.log(students);
+
+//array.filter() = creates a new array with all elements that pass the test provided by a function
+let ages =[13,16,18,22,25,28,35,40];
+
+function checkAge(element){
+    return element >=18;
+}
+
+let adults = ages.filter(checkAge);
+adults.forEach(print)
+
