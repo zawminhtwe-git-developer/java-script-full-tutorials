@@ -531,18 +531,49 @@ console.log(c);
 //spread operator = allows an itemrable such as na array or string to be epanded in plaes where zero or more argumtnts are expected 
 // ... 
 
-let numbers =[1,2,3,4,5,6,7,8,9];
-// console.log(...numbers);
-// console.log(Math.max(...numbers));
+// let numbers =[1,2,3,4,5,6,7,8,9];
+// // console.log(...numbers);
+// // console.log(Math.max(...numbers));
 
-let class1=["Spongebob","Patrick","Zaw Min Htwe"]
-let class2=["Spongebob1","Patrick1","Zaw Min Htwe1"]
+// let class1=["Spongebob","Patrick","Zaw Min Htwe"]
+// let class2=["Spongebob1","Patrick1","Zaw Min Htwe1"]
 
-class1.push(...class2)
-console.log(class1)
+// class1.push(...class2)
+// console.log(class1)
 
 
+// ***********************day twenty-nine start********************************************                        
 
+let a=1;
+let b=3;
+let c=8;
+let d=15;
+let e=5;
+let f=12;
+let g=13;
+
+console.log(sum(a,b,c));
+
+//ကိုယ်လိုချင်သလိုမရလို့ ရအောင်လုပ်မည်
+// function sum(a,b){
+//     return a+b;
+// }
+
+// function sum(a,b,c){
+//     return a+b+c;
+// }
+
+// function sum(a,b,c,d){
+//     return a+b+c+d;
+// }
+
+function sum(x,y,...numbers){
+    let total =0;
+    for(let number of numbers){
+        total += number
+    }
+    return total;
+}
 
 
                           
