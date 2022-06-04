@@ -544,15 +544,15 @@ console.log(c);
 
 // ***********************day twenty-nine start********************************************                        
 
-let a=1;
-let b=3;
-let c=8;
-let d=15;
-let e=5;
-let f=12;
-let g=13;
+// let a=1;
+// let b=3;
+// let c=8;
+// let d=15;
+// let e=5;
+// let f=12;
+// let g=13;
 
-console.log(sum(a,b,c));
+// console.log(sum(a,b,c));
 
 //ကိုယ်လိုချင်သလိုမရလို့ ရအောင်လုပ်မည်
 // function sum(a,b){
@@ -567,13 +567,23 @@ console.log(sum(a,b,c));
 //     return a+b+c+d;
 // }
 
-function sum(x,y,...numbers){
-    let total =0;
-    for(let number of numbers){
-        total += number
-    }
-    return total;
-}
+// function sum(x,y,...numbers){
+//     let total =0;
+//     for(let number of numbers){
+//         total += number
+//     }
+//     return total;
+// }
 
+// ***********************day thirty start********************************************                        
 
-                          
+    sum(12,13,displayConsole)
+
+    function sum(x,y,callBack){
+        let result = x+y
+        callBack(result);
+     } 
+
+     function displayConsole(output){
+         console.log(output);
+     }
