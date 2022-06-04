@@ -498,6 +498,11 @@ let fruits=["apple","orange","banana"];
 var dogs = new Array("Bulldog","Beagle","Labrador","How to");
 for(var i = 0; i <= dogs.length; i++){
     console.log(dogs[i]);
+    console.log(dogs.indexOf("Beagle"));
+}
+let prices =[5,10,15,20,25];
+for(let price of prices){
+    console.log(price);
 }
 
 // console.log(dogs[0]);
