@@ -577,13 +577,32 @@ console.log(c);
 
 // ***********************day thirty start********************************************                        
 
-    sum(12,13,displayConsole)
+    // sum(12,13,displayConsole)
 
-    function sum(x,y,callBack){
-        let result = x+y
-        callBack(result);
-     } 
+    // function sum(x,y,callBack){
+    //     let result = x+y
+    //     callBack(result);
+    //  } 
 
-     function displayConsole(output){
-         console.log(output);
-     }
+    //  function displayConsole(output){
+    //      console.log(output);
+    //  }
+
+
+// ***********************day thirty-one start********************************************                        
+
+let students = ["aung","naung","zaw min htwe","thaw zin htun"];
+
+students.forEach(capitalize)
+students.forEach(print)
+
+function capitalize(element,index,array){
+    array[index]=element[0].toUpperCase() + element.substring(1);
+
+}
+
+function print(element){
+    console.log(element)
+}
+
+console.log(students);
