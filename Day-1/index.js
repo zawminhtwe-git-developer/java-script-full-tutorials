@@ -453,32 +453,56 @@ console.log(c);
 
 
 // ***********************day twenty-five start********************************************
-document.getElementById("submitButton").onclick = function(){
-    let temp;
-    if(document.getElementById("cButton").checked){
-        temp = document.getElementById("textBox").value;
-        temp = Number(temp);
-        temp = toCelsius(temp);
-        document.getElementById("tempLabel").innerHTML = temp + "°"
+// document.getElementById("submitButton").onclick = function(){
+//     let temp;
+//     if(document.getElementById("cButton").checked){
+//         temp = document.getElementById("textBox").value;
+//         temp = Number(temp);
+//         temp = toCelsius(temp);
+//         document.getElementById("tempLabel").innerHTML = temp + "°"
 
-    }else if(document.getElementById("fButton").checked){
-        temp = document.getElementById("textBox").value;
-        temp = Number(temp);
-        temp = toFahrenheit(temp);
-        document.getElementById("tempLabel").innerHTML = temp + "°"
-    }else{
-        document.getElementById("tempLabel").innerHTML = "Select a Unit"
-    }
+//     }else if(document.getElementById("fButton").checked){
+//         temp = document.getElementById("textBox").value;
+//         temp = Number(temp);
+//         temp = toFahrenheit(temp);
+//         document.getElementById("tempLabel").innerHTML = temp + "°"
+//     }else{
+//         document.getElementById("tempLabel").innerHTML = "Select a Unit"
+//     }
+// }
+
+// // let temp=27;
+// // temp=toFahrenheit(temp);
+// // console.log(temp);
+
+
+// function toCelsius(temp){
+// return (temp-32) *(5/9);
+// }
+// function toFahrenheit(temp){
+// return temp *9 /5 +32;
+// }
+
+// ***********************day twenty-six start********************************************
+// array think of it asavariable
+//that can store multiple values
+let fruits=["apple","orange","banana"];
+// fruits[2]="coconut";
+// fruits.push("lemon");   // add an element
+// fruits.pop(); // removes last element.
+// fruits.unshift("mango");// add element to beginning
+// fruits.shift();   // removes element from beginnin
+
+
+
+var dogs = new Array("Bulldog","Beagle","Labrador","How to");
+for(var i = 0; i <= dogs.length; i++){
+    console.log(dogs[i]);
 }
 
-// let temp=27;
-// temp=toFahrenheit(temp);
-// console.log(temp);
-
-
-function toCelsius(temp){
-return (temp-32) *(5/9);
-}
-function toFahrenheit(temp){
-return temp *9 /5 +32;
-}
+// console.log(dogs[0]);
+// console.log(fruits);
+                          
+                            
+                               
+                          
