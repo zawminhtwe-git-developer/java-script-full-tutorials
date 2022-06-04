@@ -622,18 +622,30 @@ console.log(c);
 //   }
 // }
 
-function print(element){
-    console.log(element);
-}
+// function print(element){
+//     console.log(element);
+// }
 
 
 //array.filter() = creates a new array with all elements that pass the test provided by a function
-let ages =[13,16,18,22,25,28,35,40];
+// let ages =[13,16,18,22,25,28,35,40];
 
-function checkAge(element){
-    return element >=18;
+// function checkAge(element){
+//     return element >=18;
+// }
+
+// let adults = ages.filter(checkAge);
+// adults.forEach(print)
+
+
+// ***********************day thirty-three start********************************************                        
+//array ထဲမှာ ရှိတဲ့ တန်ဖိုးတွေကို ပေါင်းချင်ရင် reduce() ကိုသုံးပါတယ် 
+let prices=[5,10,15,20,25,30];
+
+let total=prices.reduce(checkout);
+
+console.log(`The total is:$ ${total}`);
+
+function checkout(total,element){
+    return total+element;
 }
-
-let adults = ages.filter(checkAge);
-adults.forEach(print)
-
