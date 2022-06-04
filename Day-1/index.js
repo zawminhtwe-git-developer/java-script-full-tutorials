@@ -514,16 +514,35 @@ console.log(c);
 
 // ***********************day twenty-seven start********************************************                        
 //2D array = An array of arrays
-let fruits = ["apples","oranges","bananas"];
-let vegetables =["carrots","onions","potatoes"];
-let meats=["eggs","chicken","fish"];
+// let fruits = ["apples","oranges","bananas"];
+// let vegetables =["carrots","onions","potatoes"];
+// let meats=["eggs","chicken","fish"];
 
-let groceryList=[fruits,vegetables,meats];     
-groceryList[1][1] = "steak";// replace with row and colunm
-for(let list of groceryList){
-    // console.log(list)
-    for(let food of list){
-        console.log(food);
-    }
-}
+// let groceryList=[fruits,vegetables,meats];     
+// groceryList[1][1] = "steak";// replace with row and colunm
+// for(let list of groceryList){
+//     // console.log(list)
+//     for(let food of list){
+//         console.log(food);
+//     }
+// }
+
+// ***********************day twenty-eight start********************************************                        
+//spread operator = allows an itemrable such as na array or string to be epanded in plaes where zero or more argumtnts are expected 
+// ... 
+
+let numbers =[1,2,3,4,5,6,7,8,9];
+// console.log(...numbers);
+// console.log(Math.max(...numbers));
+
+let class1=["Spongebob","Patrick","Zaw Min Htwe"]
+let class2=["Spongebob1","Patrick1","Zaw Min Htwe1"]
+
+class1.push(...class2)
+console.log(class1)
+
+
+
+
+
                           
