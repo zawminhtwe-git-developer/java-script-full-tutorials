@@ -794,34 +794,58 @@ console.log(c);
 //          methods = what an object can do
 //          use . to access properties/ methods
 
-const cycle1 = {
-    //properties
-    model:"YAMAHA",
-    color:"White",
-    year: 2022,
+// const cycle1 = {
+//     //properties
+//     model:"YAMAHA",
+//     color:"White",
+//     year: 2022,
 
-    //methods
-    drive:function(){
-        console.log(`You drive the ${this.model}`);
-    },
-    brake: function(){
-        console.log("You step on the breaks");
-    }
-}
-const cycle2 = {
-    //properties
-    model:"R1",
-    color:"Black",
-    year: 2023,
+//     //methods
+//     drive:function(){
+//         console.log(`You drive the ${this.model}`);
+//     },
+//     brake: function(){
+//         console.log("You step on the breaks");
+//     }
+// }
+// const cycle2 = {
+//     //properties
+//     model:"R1",
+//     color:"Black",
+//     year: 2023,
 
-    //methods
-    drive:function(){
-        console.log(`You drive the ${this.model}`);
-    },
-    brake: function(){
-        console.log("You step on the breaks");
-    }
+//     //methods
+//     drive:function(){
+//         console.log(`You drive the ${this.model}`);
+//     },
+//     brake: function(){
+//         console.log("You step on the breaks");
+//     }
+// }
+// console.log(cycle1.model);
+// console.log(cycle1.drive());
+// console.log(cycle2.drive());
+
+// ***********************day forty-one start********************************************                        
+// class = objects တစ်ခုကို ဆိုတာက မိတ္တူကူးသလိုမျိုးပါ 
+//              သူ့မှာ properties နဲ့ methods တွေရှိပါတယ်
+//              နောက်ပြီူးတော့ unique properties လို့ ခေါ်တဲ့ constructor ရှိပါတယ်
+
+class Player{
+    score =0;
+    //class ထဲမှာ method တွေရေးရငင် function ဆိုတဲ့ keywords မလိုပါဘူး
+     stop(){
+         console.log("You stoped the game");
+     }
+     start(){
+         console.log("You started the game");
+        
+     }
+     exit(){
+         console.log("You exited the game");
+     }
 }
-console.log(cycle1.model);
-console.log(cycle1.drive());
-console.log(cycle2.drive());
+
+const player1 = new Player();
+player1.stop();
+console.log(player1.score +=1);
