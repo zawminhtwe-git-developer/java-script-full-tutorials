@@ -891,37 +891,81 @@ console.log(c);
 
 // ***********************day forty-three start********************************************                        
 // inheritancee = a chil class can inherit all the methods and properties from another class
-class Animal{
-    alive = true;
-    eat(){
-        console.log(`This ${this.name} is eating`);
-    }
-    sleep(){
-        console.log(`This ${this.name} is sleeping`);
+// class Animal{
+//     alive = true;
+//     eat(){
+//         console.log(`This ${this.name} is eating`);
+//     }
+//     sleep(){
+//         console.log(`This ${this.name} is sleeping`);
+//     }
+// }
+
+// class Fish extends Animal{
+//     name ="Fish";
+
+//     swin(){
+//         console.log(`This ${this.name} is swiming`);
+//     }
+// }
+
+// class Dog extends Animal{
+//     name ="Dog";
+
+//     bark(){
+//         console.log(`This ${this.name} is barking`);
+//     }
+// }
+
+// const fish = new Fish();
+// const dog = new Dog();
+
+// console.log(fish.name);
+// console.log(dog.name);
+
+// console.log(fish.swin());
+// console.log(fish.sleep());
+
+// ***********************day forty-four start********************************************                        
+//super = Refers to the parent class
+        //Commonly used to invoke constructor of a parent class
+class Animals{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
     }
 }
 
-class Fish extends Animal{
-    name ="Fish";
+class Dog extends Animals{
 
-    swin(){
-        console.log(`This ${this.name} is swiming`);
+    constructor(name,age,runspeed){
+       super(name,age);
+        this.runspeed=runspeed;
+    }
+
+}
+
+class Fish extends Animals{
+        constructor(name,age,swimspeed){
+            super(name,age);
+        this.swimspeed=swimspeed;
     }
 }
 
-class Dog extends Animal{
-    name ="Dog";
-
-    bark(){
-        console.log(`This ${this.name} is barking`);
+class Bird extends Animals{
+    constructor(name,age,flyspeed){
+        super(name,age);
+        //ကလပ်တစ်ခုစီတိုင်းမှာ Constructor အနေနဲ့ တူညီတာရှိနေရင် super()ဆိိုပြီးပြန်ခေါ်ပေးရတယ်
+        // this.name=name;
+        // this.age=age;
+        this.flyspeed=flyspeed;
     }
 }
 
-const fish = new Fish();
-const dog = new Dog();
+const dog= new Dog("Dog",1,40);
+const fish= new Fish("Fish",1,40);
+const bird= new Bird("Bird",1,40);
 
-console.log(fish.name);
 console.log(dog.name);
-
-console.log(fish.swin());
-console.log(fish.sleep());
+console.log(dog.age);
+console.log(dog.runspeed);
