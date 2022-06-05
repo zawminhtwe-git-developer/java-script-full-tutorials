@@ -679,3 +679,20 @@ console.log(prices);
 // function print(element){
 //     console.log(element)
 // }
+
+// ***********************day thirty-five start********************************************                        
+let count =0;
+document.getElementById("value").innerHTML = count;
+
+function increase()
+{
+    count += 1
+    document.getElementById("value").innerHTML = count;
+}
+
+
+function decrease()
+{
+    count -= 1
+    document.getElementById("value").innerHTML = count;
+}
