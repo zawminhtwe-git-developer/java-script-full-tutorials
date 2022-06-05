@@ -866,27 +866,62 @@ console.log(c);
 //          properties: useful for chches, fixed-configuration 
 //          method: useful for utility function
 //         static လို့ပါလာရင် class အပြင်ကနေ တိုက်ရိုက်ခေါ်နိုင်သည်
-class Car{
-  static  numberOfCars = 0;
-    constructor(model){
-        this.model = model;
-        Car.numberOfCars +=1;
-    }
-    startRace(){
-        console.log("3....2....1...GO!");
-    }
+// class Car{
+//   static  numberOfCars = 0;
+//     constructor(model){
+//         this.model = model;
+//         Car.numberOfCars +=1;
+//     }
+//     startRace(){
+//         console.log("3....2....1...GO!");
+//     }
 
     //    static startRace(){
     //     console.log("3....2....1...GO!");
     // }
+// }
 
-
-}
-
-const car1 = new Car("Yamaha");
-const car2 = new Car("Yamaha1");
-car1.startRace();
+// const car1 = new Car("Yamaha");
+// const car2 = new Car("Yamaha1");
+// car1.startRace();
 // car1.numberOfCars +=1;
-console.log(Car.numberOfCars);
+// console.log(Car.numberOfCars);
 
 // Car.startRace();
+
+// ***********************day forty-three start********************************************                        
+// inheritancee = a chil class can inherit all the methods and properties from another class
+class Animal{
+    alive = true;
+    eat(){
+        console.log(`This ${this.name} is eating`);
+    }
+    sleep(){
+        console.log(`This ${this.name} is sleeping`);
+    }
+}
+
+class Fish extends Animal{
+    name ="Fish";
+
+    swin(){
+        console.log(`This ${this.name} is swiming`);
+    }
+}
+
+class Dog extends Animal{
+    name ="Dog";
+
+    bark(){
+        console.log(`This ${this.name} is barking`);
+    }
+}
+
+const fish = new Fish();
+const dog = new Dog();
+
+console.log(fish.name);
+console.log(dog.name);
+
+console.log(fish.swin());
+console.log(fish.sleep());
