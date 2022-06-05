@@ -718,21 +718,46 @@ console.log(c);
 // price.forEach((element)=>console.log(element))
 
 // ***********************day thirty-seven start********************************************                        
-let cards = ["A","2","3","4","5","6","7","8","B","K"]
+// let cards = ["A","2","3","4","5","6","7","8","B","K"]
 
-shuffle(cards);
-console.log(cards)
+// shuffle(cards);
+// console.log(cards)
 
 
-function shuffle(array){ //ကလန်ဖန်ထိုးခြင်း
-let currentIndex = array.length;
-    while(currentIndex !=0){
-        let randomIndex = Math.floor(Math.random() * array.length);
-        currentIndex -=1;
+// function shuffle(array){ //ကလန်ဖန်ထိုးခြင်း
+// let currentIndex = array.length;
+//     while(currentIndex !=0){
+//         let randomIndex = Math.floor(Math.random() * array.length);
+//         currentIndex -=1;
        
-        let temp = array[currentIndex];
-        array[currentIndex]= array[randomIndex];
-        array[randomIndex]= temp;
+//         let temp = array[currentIndex];
+//         array[currentIndex]= array[randomIndex];
+//         array[randomIndex]= temp;
+//     }
+//     return array;
+// }
+
+// ***********************day thirty-eight start********************************************                        
+//nested functions = functin inside other functions.   
+                    // Outer functions have access to inner function
+                    // inner functions are "hidden from outside"
+                    // used in closures (future video topic)
+
+let userName = "Zaw Min Htwe";
+let userInbox =10;
+
+login();
+
+function login(){
+
+    displayUserName();
+    displayInbox();
+
+    function displayUserName(){
+        console.log(`Welcome ${userName}`)
     }
-    return array;
+
+    function displayInbox(){
+        console.log(`You have ${userInbox} message`)
+    }
 }
