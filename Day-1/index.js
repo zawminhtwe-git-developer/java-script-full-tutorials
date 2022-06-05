@@ -972,32 +972,60 @@ console.log(c);
 
 // ***********************day forty-five start********************************************                        
 //getter and setter
+// class Car{
+//     constructor(power){
+//         this._power = power; //_ is protected properties ပြန်ပြီးအလွယ်တစ်ကူ ပြင်လို့မရအောင်ပါ
+//         this._gas = 25; //_ is protected properties ပြန်ပြီးအလွယ်တစ်ကူ ပြင်လို့မရအောင်ပါ
+//     }
+
+//     get power(){
+//         return `${this._power}`;
+//     }
+//     get gas(){
+//         return `${this._gas} L (${this._gas /50 * 100}%)`; 
+//     }
+
+//     set gas(value){
+//         if(value > 50){
+//             value=50;
+//         }else if(value < 0){
+//             value = 0;
+//         }
+
+//         this._gas = value;
+//     }
+// }
+// const car = new Car(400);
+
+// console.log(car.gas =2000);
+// console.log(car.power);
+// console.log(car.gas);
+
+
+// ***********************day forty-six start********************************************                        
+
 class Car{
-    constructor(power){
-        this._power = power; //_ is protected properties ပြန်ပြီးအလွယ်တစ်ကူ ပြင်လို့မရအောင်ပါ
-        this._gas = 25; //_ is protected properties ပြန်ပြီးအလွယ်တစ်ကူ ပြင်လို့မရအောင်ပါ
-    }
+    constructor(model,year,color){
+        this.model=model;
+        this.year=year;
+        this.color=color;
+   }
+}
+const car1=new Car("Mustang",2023,"red");
 
-    get power(){
-        return `${this._power}`;
-    }
-    get gas(){
-        return `${this._gas} L (${this._gas /50 * 100}%)`; 
-    }
+const car2=new Car("Corvette",2024,"blue");
 
-    set gas(value){
-        if(value > 50){
-            value=50;
-        }else if(value < 0){
-            value = 0;
-        }
+const car3=new Car("Lambo",2022,"yellow");
 
-        this._gas = value;
-    }
+changeColor(car3,"gold");
+displayInfo(car3);
+
+function displayInfo(car){
+    console.log(car.model);
+    console.log(car.year);
+    console.log(car.color);
 }
 
-const car = new Car(400);
-
-console.log(car.gas =2000);
-console.log(car.power);
-console.log(car.gas);
+function changeColor(car,color){
+    car.color = color;
+}
