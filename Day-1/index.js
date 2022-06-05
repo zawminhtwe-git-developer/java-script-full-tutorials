@@ -641,12 +641,12 @@ console.log(c);
 // ***********************day thirty-three start********************************************                        
 //array ထဲမှာ ရှိတဲ့ တန်ဖိုးတွေကို ပေါင်းချင်ရင် reduce() ကိုသုံးပါတယ် 
 //array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
-let prices=[5,10,15,20,25,30,10];
+// let prices=[5,10,15,20,25,30,10];
 
-prices =prices.reduce((total,current)=>{
-        return 	total + current;
-},0);
-console.log(prices);
+// prices =prices.reduce((total,current)=>{
+//         return 	total + current;
+// },0);
+// console.log(prices);
 
 // let total=prices.reduce(checkout);
 
@@ -681,18 +681,39 @@ console.log(prices);
 // }
 
 // ***********************day thirty-five start********************************************                        
-let count =0;
-document.getElementById("value").innerHTML = count;
+// let count =0;
+// document.getElementById("value").innerHTML = count;
 
-function increase()
-{
-    count += 1
-    document.getElementById("value").innerHTML = count;
+// function increase()
+// {
+//     count += 1
+//     document.getElementById("value").innerHTML = count;
+// }
+
+
+// function decrease()
+// {
+//     count -= 1
+//     document.getElementById("value").innerHTML = count;
+// }
+
+// ***********************day thirty-six start********************************************                        
+// arrow function =>
+
+let grades = [100,50,75,150,200];
+grades.sort(descendingSort);
+grades.forEach(print);
+console.log(grades);
+
+function descendingSort(x,y){
+    return y-x;
+  
 }
 
-
-function decrease()
-{
-    count -= 1
-    document.getElementById("value").innerHTML = count;
+function print(element){
+    console.log(element)
 }
+// အပေါ်က function နဲ့ရေးထားတာလည်း အတူတူပါပဲ အတိုနည်းပါ အခုအောက်ကဟာက
+let price =[1000,1500,2000,8000,500,4500];
+price.sort((x,y)=>x-y);
+price.forEach((element)=>console.log(element))
