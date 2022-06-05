@@ -699,21 +699,40 @@ console.log(c);
 
 // ***********************day thirty-six start********************************************                        
 // arrow function =>
+// let grades = [100,50,75,150,200];
+// grades.sort(descendingSort);
+// grades.forEach(print);
+// console.log(grades);
 
-let grades = [100,50,75,150,200];
-grades.sort(descendingSort);
-grades.forEach(print);
-console.log(grades);
-
-function descendingSort(x,y){
-    return y-x;
+// function descendingSort(x,y){
+//     return y-x;
   
-}
+// }
 
-function print(element){
-    console.log(element)
-}
+// function print(element){
+//     console.log(element)
+// }
 // အပေါ်က function နဲ့ရေးထားတာလည်း အတူတူပါပဲ အတိုနည်းပါ အခုအောက်ကဟာက
-let price =[1000,1500,2000,8000,500,4500];
-price.sort((x,y)=>x-y);
-price.forEach((element)=>console.log(element))
+// let price =[1000,1500,2000,8000,500,4500];
+// price.sort((x,y)=>x-y);
+// price.forEach((element)=>console.log(element))
+
+// ***********************day thirty-seven start********************************************                        
+let cards = ["A","2","3","4","5","6","7","8","B","K"]
+
+shuffle(cards);
+console.log(cards)
+
+
+function shuffle(array){ //ကလန်ဖန်ထိုးခြင်း
+let currentIndex = array.length;
+    while(currentIndex !=0){
+        let randomIndex = Math.floor(Math.random() * array.length);
+        currentIndex -=1;
+       
+        let temp = array[currentIndex];
+        array[currentIndex]= array[randomIndex];
+        array[randomIndex]= temp;
+    }
+    return array;
+}
