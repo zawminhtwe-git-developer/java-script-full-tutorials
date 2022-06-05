@@ -831,32 +831,62 @@ console.log(c);
 //              သူ့မှာ properties နဲ့ methods တွေရှိပါတယ်
 //              နောက်ပြီူးတော့ unique properties လို့ ခေါ်တဲ့ constructor ရှိပါတယ်
 
-class Player{
+// class Player{
 
-    constructor(name,age,gpa){
-        this.name = name;
-        this.age = age;
-        this.gpa = gpa;
+//     constructor(name,age,gpa){
+//         this.name = name;
+//         this.age = age;
+//         this.gpa = gpa;
+//     }
+
+//     score =0;
+//     //class ထဲမှာ method တွေရေးရငင် function ဆိုတဲ့ keywords မလိုပါဘူး
+//      stop(){
+//          console.log(`You stoped the game by ${this.name}`);
+//      }
+//      start(){
+//          console.log("You started the game");
+        
+//      }
+//      exit(){
+//          console.log("You exited the game");
+//      }
+// }
+
+// const player1 = new Player("ZMH",13,.2);
+// player1.stop();
+// console.log(player1.score +=1);
+
+// const player2 = new Player("MgHtwe",18,.2);
+// player1.stop();
+// console.log(player1.score +=1);
+
+// ***********************day forty-two start********************************************                        
+//static = belongs to the class, not the objects 
+//          properties: useful for chches, fixed-configuration 
+//          method: useful for utility function
+//         static လို့ပါလာရင် class အပြင်ကနေ တိုက်ရိုက်ခေါ်နိုင်သည်
+class Car{
+  static  numberOfCars = 0;
+    constructor(model){
+        this.model = model;
+        Car.numberOfCars +=1;
+    }
+    startRace(){
+        console.log("3....2....1...GO!");
     }
 
-    score =0;
-    //class ထဲမှာ method တွေရေးရငင် function ဆိုတဲ့ keywords မလိုပါဘူး
-     stop(){
-         console.log(`You stoped the game by ${this.name}`);
-     }
-     start(){
-         console.log("You started the game");
-        
-     }
-     exit(){
-         console.log("You exited the game");
-     }
+    //    static startRace(){
+    //     console.log("3....2....1...GO!");
+    // }
+
+
 }
 
-const player1 = new Player("ZMH",13,.2);
-player1.stop();
-console.log(player1.score +=1);
+const car1 = new Car("Yamaha");
+const car2 = new Car("Yamaha1");
+car1.startRace();
+// car1.numberOfCars +=1;
+console.log(Car.numberOfCars);
 
-const player2 = new Player("MgHtwe",18,.2);
-player1.stop();
-console.log(player1.score +=1);
+// Car.startRace();
