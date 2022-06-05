@@ -929,43 +929,75 @@ console.log(c);
 // ***********************day forty-four start********************************************                        
 //super = Refers to the parent class
         //Commonly used to invoke constructor of a parent class
-class Animals{
-    constructor(name,age){
-        this.name=name;
-        this.age=age;
+// class Animals{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+// }
+
+// class Dog extends Animals{
+
+//     constructor(name,age,runspeed){
+//        super(name,age);
+//         this.runspeed=runspeed;
+//     }
+
+// }
+
+// class Fish extends Animals{
+//         constructor(name,age,swimspeed){
+//             super(name,age);
+//         this.swimspeed=swimspeed;
+//     }
+// }
+
+// class Bird extends Animals{
+//     constructor(name,age,flyspeed){
+//         super(name,age);
+//         //ကလပ်တစ်ခုစီတိုင်းမှာ Constructor အနေနဲ့ တူညီတာရှိနေရင် super()ဆိိုပြီးပြန်ခေါ်ပေးရတယ်
+//         // this.name=name;
+//         // this.age=age;
+//         this.flyspeed=flyspeed;
+//     }
+// }
+
+// const dog= new Dog("Dog",1,40);
+// const fish= new Fish("Fish",1,40);
+// const bird= new Bird("Bird",1,40);
+
+// console.log(dog.name);
+// console.log(dog.age);
+// console.log(dog.runspeed);
+
+// ***********************day forty-five start********************************************                        
+//getter and setter
+class Car{
+    constructor(power){
+        this._power = power; //_ is protected properties ပြန်ပြီးအလွယ်တစ်ကူ ပြင်လို့မရအောင်ပါ
+        this._gas = 25; //_ is protected properties ပြန်ပြီးအလွယ်တစ်ကူ ပြင်လို့မရအောင်ပါ
+    }
+
+    get power(){
+        return `${this._power}`;
+    }
+    get gas(){
+        return `${this._gas} L (${this._gas /50 * 100}%)`; 
+    }
+
+    set gas(value){
+        if(value > 50){
+            value=50;
+        }else if(value < 0){
+            value = 0;
+        }
+
+        this._gas = value;
     }
 }
 
-class Dog extends Animals{
+const car = new Car(400);
 
-    constructor(name,age,runspeed){
-       super(name,age);
-        this.runspeed=runspeed;
-    }
-
-}
-
-class Fish extends Animals{
-        constructor(name,age,swimspeed){
-            super(name,age);
-        this.swimspeed=swimspeed;
-    }
-}
-
-class Bird extends Animals{
-    constructor(name,age,flyspeed){
-        super(name,age);
-        //ကလပ်တစ်ခုစီတိုင်းမှာ Constructor အနေနဲ့ တူညီတာရှိနေရင် super()ဆိိုပြီးပြန်ခေါ်ပေးရတယ်
-        // this.name=name;
-        // this.age=age;
-        this.flyspeed=flyspeed;
-    }
-}
-
-const dog= new Dog("Dog",1,40);
-const fish= new Fish("Fish",1,40);
-const bird= new Bird("Bird",1,40);
-
-console.log(dog.name);
-console.log(dog.age);
-console.log(dog.runspeed);
+console.log(car.gas =2000);
+console.log(car.power);
+console.log(car.gas);
