@@ -640,7 +640,13 @@ console.log(c);
 
 // ***********************day thirty-three start********************************************                        
 //array ထဲမှာ ရှိတဲ့ တန်ဖိုးတွေကို ပေါင်းချင်ရင် reduce() ကိုသုံးပါတယ် 
-// let prices=[5,10,15,20,25,30];
+//array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+let prices=[5,10,15,20,25,30,10];
+
+prices =prices.reduce((total,current)=>{
+        return 	total + current;
+},0);
+console.log(prices);
 
 // let total=prices.reduce(checkout);
 
@@ -652,24 +658,24 @@ console.log(c);
 
 
 // ***********************day thirty-four start********************************************                        
-let grades = [100,200,300,150,250,350,400,800,600];
+// let grades = [100,200,300,150,250,350,400,800,600];
 
 
 // grades.sort(descendingSort).forEach(print);// ငယ်စဉ်ကြီးလိုက်စီပေးပါတယ်
 // console.log(grades);
 
-grades = grades.sort(ascendingSort);
-grades.forEach(print)
+// grades = grades.sort(ascendingSort);
+// grades.forEach(print)
 
 
-function descendingSort(x,y){ //ကြီစဉ်ငယ်လိုက်
-    return y-x;
-}
+// function descendingSort(x,y){ //ကြီစဉ်ငယ်လိုက်
+//     return y-x;
+// }
 
-function ascendingSort(x,y){ //ငယ်စဉ်ကြီးလိုက်
-    return x-y;
-}
+// function ascendingSort(x,y){ //ငယ်စဉ်ကြီးလိုက်
+//     return x-y;
+// }
 
-function print(element){
-    console.log(element)
-}
+// function print(element){
+//     console.log(element)
+// }
