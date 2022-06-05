@@ -765,25 +765,48 @@ console.log(c);
 // ***********************day thirty-nine start********************************************                        
 // Map = object that holds key-value pairs of any data type
 
-const store =new Map([
-    ["t-shirt",20],
-    ["jean-shirt",100],
-    ["foot",50],
-    ["underwear",30],
-    ["socks",800],
-    ["cycle",2000],
-    ["glass",200],
-]);
+// const store =new Map([
+//     ["t-shirt",20],
+//     ["jean-shirt",100],
+//     ["foot",50],
+//     ["underwear",30],
+//     ["socks",800],
+//     ["cycle",2000],
+//     ["glass",200],
+// ]);
 
-let shoppingCart =0;
-store.get("t-shirt");
-store.set("hat",40);
-store.delete("foot");
-console.log(store.has("hat"));
-console.log(store.size)
+// let shoppingCart =0;
+// store.get("t-shirt");
+// store.set("hat",40);
+// store.delete("foot");
+// console.log(store.has("hat"));
+// console.log(store.size)
 
-store.forEach((value,key)=>console.log(`${key} $ ${value}`))
+// store.forEach((value,key)=>console.log(`${key} $ ${value}`))
 
-shoppingCart += store.get("t-shirt");
-shoppingCart += store.get("jean-shirt");
-console.log(shoppingCart)
+// shoppingCart += store.get("t-shirt");
+// shoppingCart += store.get("jean-shirt");
+// console.log(shoppingCart)
+
+// ***********************day forty start********************************************                        
+//object = A group of properties and methods
+//          properties = what an object has
+//          methods = what an object can do
+//          use . to access properties/ methods
+
+const cycle = {
+    //properties
+    model:"YAMAHA",
+    color:"White",
+    year: 2022,
+
+    //methods
+    drive:function(){
+        console.log("You drive the car");
+    },
+    brake: function(){
+        console.log("You step on the breaks");
+    }
+}
+console.log(cycle.model);
+console.log(cycle.drive());
