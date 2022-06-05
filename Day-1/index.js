@@ -832,10 +832,17 @@ console.log(c);
 //              နောက်ပြီူးတော့ unique properties လို့ ခေါ်တဲ့ constructor ရှိပါတယ်
 
 class Player{
+
+    constructor(name,age,gpa){
+        this.name = name;
+        this.age = age;
+        this.gpa = gpa;
+    }
+
     score =0;
     //class ထဲမှာ method တွေရေးရငင် function ဆိုတဲ့ keywords မလိုပါဘူး
      stop(){
-         console.log("You stoped the game");
+         console.log(`You stoped the game by ${this.name}`);
      }
      start(){
          console.log("You started the game");
@@ -846,6 +853,10 @@ class Player{
      }
 }
 
-const player1 = new Player();
+const player1 = new Player("ZMH",13,.2);
+player1.stop();
+console.log(player1.score +=1);
+
+const player2 = new Player("MgHtwe",18,.2);
 player1.stop();
 console.log(player1.score +=1);
