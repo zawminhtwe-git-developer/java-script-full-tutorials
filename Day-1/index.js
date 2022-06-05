@@ -794,7 +794,7 @@ console.log(c);
 //          methods = what an object can do
 //          use . to access properties/ methods
 
-const cycle = {
+const cycle1 = {
     //properties
     model:"YAMAHA",
     color:"White",
@@ -802,11 +802,26 @@ const cycle = {
 
     //methods
     drive:function(){
-        console.log("You drive the car");
+        console.log(`You drive the ${this.model}`);
     },
     brake: function(){
         console.log("You step on the breaks");
     }
 }
-console.log(cycle.model);
-console.log(cycle.drive());
+const cycle2 = {
+    //properties
+    model:"R1",
+    color:"Black",
+    year: 2023,
+
+    //methods
+    drive:function(){
+        console.log(`You drive the ${this.model}`);
+    },
+    brake: function(){
+        console.log("You step on the breaks");
+    }
+}
+console.log(cycle1.model);
+console.log(cycle1.drive());
+console.log(cycle2.drive());
