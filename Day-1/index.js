@@ -743,21 +743,47 @@ console.log(c);
                     // inner functions are "hidden from outside"
                     // used in closures (future video topic)
 
-let userName = "Zaw Min Htwe";
-let userInbox =10;
+// let userName = "Zaw Min Htwe";
+// let userInbox =10;
 
-login();
+// login();
 
-function login(){
+// function login(){
 
-    displayUserName();
-    displayInbox();
+//     displayUserName();
+//     displayInbox();
 
-    function displayUserName(){
-        console.log(`Welcome ${userName}`)
-    }
+//     function displayUserName(){
+//         console.log(`Welcome ${userName}`)
+//     }
 
-    function displayInbox(){
-        console.log(`You have ${userInbox} message`)
-    }
-}
+//     function displayInbox(){
+//         console.log(`You have ${userInbox} message`)
+//     }
+// }
+
+// ***********************day thirty-nine start********************************************                        
+// Map = object that holds key-value pairs of any data type
+
+const store =new Map([
+    ["t-shirt",20],
+    ["jean-shirt",100],
+    ["foot",50],
+    ["underwear",30],
+    ["socks",800],
+    ["cycle",2000],
+    ["glass",200],
+]);
+
+let shoppingCart =0;
+store.get("t-shirt");
+store.set("hat",40);
+store.delete("foot");
+console.log(store.has("hat"));
+console.log(store.size)
+
+store.forEach((value,key)=>console.log(`${key} $ ${value}`))
+
+shoppingCart += store.get("t-shirt");
+shoppingCart += store.get("jean-shirt");
+console.log(shoppingCart)
