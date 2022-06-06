@@ -1036,13 +1036,13 @@ console.log(c);
 //                  Not directly referenced 
 //                  less syntax,No need for unique names
 
-class Card{
-           constructor(value, suit){
-               this.value =value;
-               this.suit = suit;
+// class Card{
+//            constructor(value, suit){
+//                this.value =value;
+//                this.suit = suit;
 
-           }
-       } 
+//            }
+//        } 
        
        // ရိုးရိုးအသုံးပြုပြီခေါ်ယူခြင်း
     //    let card1 = new Card("A","Hearts");
@@ -1061,16 +1061,36 @@ class Card{
     //    console.log(cards[0].value  +card1.suit);
 
     // အစမ်းနဲ့ ခေါ်သုံးမယ် //anonymous objects
-       let cards =[     new Card("A","Hearts"),
-                        new Card("BB","Spades"),
-                        new Card("CC","Diamonds"),
-                        new Card("DD","Diamonds"),
-                        new Card("EE","Diamonds"),
-                        new Card("FF","Diamonds"),
-                        new Card("GG","Diamonds"),
-                        new Card("HH","Diamonds"),
-                ]
+    //    let cards =[     new Card("A","Hearts"),
+    //                     new Card("BB","Spades"),
+    //                     new Card("CC","Diamonds"),
+    //                     new Card("DD","Diamonds"),
+    //                     new Card("EE","Diamonds"),
+    //                     new Card("FF","Diamonds"),
+    //                     new Card("GG","Diamonds"),
+    //                     new Card("HH","Diamonds"),
+    //             ]
 
-    // console.log(cards[0].value);
+    // // console.log(cards[0].value);
 
-    cards.forEach(card =>console.log(`${card.value}  ${card.suit}`))
+    // cards.forEach(card =>console.log(`${card.value}  ${card.suit}`))
+
+
+//***********************day forty-eight start********************************************   
+// error =object with a description of something went wrong
+
+// console.lob(); index.js:1082 Uncaught TypeError: console.lob is not a function
+try {
+    let x = window.prompt("Enter a #");
+    x=Number(x);
+    if(isNaN(x)) throw "That wasn't a number"
+    if(x == "") throw "That was empty";
+
+
+console.log(`${x} is a number`)
+
+} catch (error) {
+    console.log(error)
+}finally{
+    console.log("This is always executes");
+}
