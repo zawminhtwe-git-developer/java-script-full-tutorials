@@ -1080,17 +1080,62 @@ console.log(c);
 // error =object with a description of something went wrong
 
 // console.lob(); index.js:1082 Uncaught TypeError: console.lob is not a function
-try {
-    let x = window.prompt("Enter a #");
-    x=Number(x);
-    if(isNaN(x)) throw "That wasn't a number"
-    if(x == "") throw "That was empty";
+// try {
+//     let x = window.prompt("Enter a #");
+//     x=Number(x);
+//     if(isNaN(x)) throw "That wasn't a number"
+//     if(x == "") throw "That was empty";
 
 
-console.log(`${x} is a number`)
+// console.log(`${x} is a number`)
 
-} catch (error) {
-    console.log(error)
-}finally{
-    console.log("This is always executes");
+// } catch (error) {
+//     console.log(error)
+// }finally{
+//     console.log("This is always executes");
+// }
+
+//***********************day forty-nine start********************************************   
+//setTimeout() = invokes a function after a number of milisecond 
+//                  asynchronous function
+
+// setTimeout(firstMessage,3000);
+let item = "cryptocurrency";
+let price = 420.69;
+
+
+
+
+
+let one = setTimeout(() => {
+    firstMessage(item,price)
+}, 3000);
+
+let two = setTimeout(() => {
+    secondMessage()
+}, 6000);
+
+let three = setTimeout(() => {
+    thirdMessage()
+}, 9000);
+
+function firstMessage(item,price){
+    alert(`Buy this ${item} for $${price} to get`);
+}
+
+
+function secondMessage(){
+    alert(`Free Course in html`);
+}
+
+
+function thirdMessage(){
+    alert(`Free course in js`);
+}
+
+document.getElementById("myButton").onclick = function(){
+    clearTimeout(one);
+    clearTimeout(two);
+    clearTimeout(three);
+    alert("Thak for buying in this products")
 }
