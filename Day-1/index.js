@@ -1100,42 +1100,71 @@ console.log(c);
 //                  asynchronous function
 
 // setTimeout(firstMessage,3000);
-let item = "cryptocurrency";
-let price = 420.69;
+// let item = "cryptocurrency";
+// let price = 420.69;
 
 
 
 
 
-let one = setTimeout(() => {
-    firstMessage(item,price)
-}, 3000);
+// let one = setTimeout(() => {
+//     firstMessage(item,price)
+// }, 3000);
 
-let two = setTimeout(() => {
-    secondMessage()
-}, 6000);
+// let two = setTimeout(() => {
+//     secondMessage()
+// }, 6000);
 
-let three = setTimeout(() => {
-    thirdMessage()
-}, 9000);
+// let three = setTimeout(() => {
+//     thirdMessage()
+// }, 9000);
 
-function firstMessage(item,price){
-    alert(`Buy this ${item} for $${price} to get`);
+// function firstMessage(item,price){
+//     alert(`Buy this ${item} for $${price} to get`);
+// }
+
+
+// function secondMessage(){
+//     alert(`Free Course in html`);
+// }
+
+
+// function thirdMessage(){
+//     alert(`Free course in js`);
+// }
+
+// document.getElementById("myButton").onclick = function(){
+//     clearTimeout(one);
+//     clearTimeout(two);
+//     clearTimeout(three);
+//     alert("Thak for buying in this products")
+// }
+
+//***********************day fifty start********************************************   
+//setInterval() = invokes a funtion repeatedly after a seconds
+let count =0;
+let max=window.prompt("Count up to what #?");
+max=Number(max);
+
+const myTimer = setInterval(countUp,1000);
+
+function countUp(){
+    count+= 1;
+    console.log(count);
+
+    if(count >= max){
+        clearInterval(myTimer);
+    }
 }
 
+let notShow = setInterval(show,5000);
 
-function secondMessage(){
-    alert(`Free Course in html`);
+setInterval(hide,6000);
+
+function show(){
+    alert("Hello");
 }
 
-
-function thirdMessage(){
-    alert(`Free course in js`);
-}
-
-document.getElementById("myButton").onclick = function(){
-    clearTimeout(one);
-    clearTimeout(two);
-    clearTimeout(three);
-    alert("Thak for buying in this products")
+function hide(){
+clearInterval(notShow); 
 }
