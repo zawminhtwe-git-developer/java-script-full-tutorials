@@ -1142,29 +1142,43 @@ console.log(c);
 
 //***********************day fifty start********************************************   
 //setInterval() = invokes a funtion repeatedly after a seconds
-let count =0;
-let max=window.prompt("Count up to what #?");
-max=Number(max);
+// let count =0;
+// let max=window.prompt("Count up to what #?");
+// max=Number(max);
 
-const myTimer = setInterval(countUp,1000);
+// const myTimer = setInterval(countUp,1000);
 
-function countUp(){
-    count+= 1;
-    console.log(count);
+// function countUp(){
+//     count+= 1;
+//     console.log(count);
 
-    if(count >= max){
-        clearInterval(myTimer);
-    }
-}
+//     if(count >= max){
+//         clearInterval(myTimer);
+//     }
+// }
 
-let notShow = setInterval(show,5000);
+// let notShow = setInterval(show,5000);
 
-setInterval(hide,6000);
+// setInterval(hide,6000);
 
-function show(){
-    alert("Hello");
-}
+// function show(){
+//     alert("Hello");
+// }
 
-function hide(){
-clearInterval(notShow); 
-}
+// function hide(){
+// clearInterval(notShow); 
+// }
+
+//***********************day fifty-one start********************************************   
+// synchronous code=In an ordered sequence.
+//Step-by-step linear instructions
+//(start now,finish now)
+
+// asynchronous code Out of sequence.
+// Ex.Accessadatabase Fetchafile 
+//    Tasks that take time
+//(start now,finish sometime later)
+
+console.log("START");
+setTimeout(()=>console.log("This is asynchronous"),5000);
+console.log("END");
