@@ -1004,28 +1004,73 @@ console.log(c);
 
 // ***********************day forty-six start********************************************                        
 
-class Car{
-    constructor(model,year,color){
-        this.model=model;
-        this.year=year;
-        this.color=color;
-   }
-}
-const car1=new Car("Mustang",2023,"red");
+// class Car{
+//     constructor(model,year,color){
+//         this.model=model;
+//         this.year=year;
+//         this.color=color;
+//    }
+// }
+// const car1=new Car("Mustang",2023,"red");
 
-const car2=new Car("Corvette",2024,"blue");
+// const car2=new Car("Corvette",2024,"blue");
 
-const car3=new Car("Lambo",2022,"yellow");
+// const car3=new Car("Lambo",2022,"yellow");
 
-changeColor(car3,"gold");
-displayInfo(car3);
+// changeColor(car3,"gold");
+// displayInfo(car3);
 
-function displayInfo(car){
-    console.log(car.model);
-    console.log(car.year);
-    console.log(car.color);
-}
+// function displayInfo(car){
+//     console.log(car.model);
+//     console.log(car.year);
+//     console.log(car.color);
+// }
 
-function changeColor(car,color){
-    car.color = color;
-}
+// function changeColor(car,color){
+//     car.color = color;
+// }
+
+
+//***********************day forty-seven start********************************************   
+//anonymous objects = Objects without a name 
+//                  Not directly referenced 
+//                  less syntax,No need for unique names
+
+class Card{
+           constructor(value, suit){
+               this.value =value;
+               this.suit = suit;
+
+           }
+       } 
+       
+       // ရိုးရိုးအသုံးပြုပြီခေါ်ယူခြင်း
+    //    let card1 = new Card("A","Hearts");
+    //    let card2 = new Card("BB","Spades");
+    //    let card3 = new Card("A","Diamonds");
+    //    let card4 = new Card("A","Clubs");
+    //    let card5 = new Card("B","Hearts");
+    //    let card6 = new Card("B","Hearts");
+    //    let card7 = new Card("B","Hearts");
+    //    let card8 = new Card("BB","Hearts");
+    //    let card9 = new Card("BB","Hearts");
+    //    let card10 = new Card("BB","Hearts");
+
+    //    let cards =[card1,card2,card3,card4,card5,card6,card7,card8,card8,card9,card10]
+    //    console.log(card2.value  +card3.suit);
+    //    console.log(cards[0].value  +card1.suit);
+
+    // အစမ်းနဲ့ ခေါ်သုံးမယ် //anonymous objects
+       let cards =[     new Card("A","Hearts"),
+                        new Card("BB","Spades"),
+                        new Card("CC","Diamonds"),
+                        new Card("DD","Diamonds"),
+                        new Card("EE","Diamonds"),
+                        new Card("FF","Diamonds"),
+                        new Card("GG","Diamonds"),
+                        new Card("HH","Diamonds"),
+                ]
+
+    // console.log(cards[0].value);
+
+    cards.forEach(card =>console.log(`${card.value}  ${card.suit}`))
