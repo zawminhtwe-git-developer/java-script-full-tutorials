@@ -1179,6 +1179,17 @@ console.log(c);
 //    Tasks that take time
 //(start now,finish sometime later)
 
+/*
 console.log("START");
 setTimeout(()=>console.log("This is asynchronous"),5000);
 console.log("END");
+*/
+
+//***********************day fifty-two start********************************************   
+// import {PI,getCircumference,getArea} from ".export"
+import * as MathUtil from "./math_util";
+
+console.log(MathUtil.PI);
+
+let circumference = MathUtil.getCircumference(10);
+console.log(circumference);
