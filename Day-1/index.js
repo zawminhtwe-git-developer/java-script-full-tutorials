@@ -1186,10 +1186,67 @@ console.log("END");
 */
 
 //***********************day fifty-two start********************************************   
-// import {PI,getCircumference,getArea} from ".export"
-import * as MathUtil from "./math_util";
+// import {PI,getCircumference,getArea} from "./math_util"
+// import * as MathUtil from "./math_util";
 
-console.log(MathUtil.PI);
+// console.log(MathUtil.PI);
 
-let circumference = MathUtil.getCircumference(10);
-console.log(circumference);
+// let circumference = MathUtil.getCircumference(10);
+// console.log(circumference);
+
+
+//***********************day fifty-three start********************************************   
+//promise = object that encapsulates the result of an asynchronous operation 
+//          let asynchronous methods return values like synchronous methods
+//          "I Promise to return something in the future"
+const promise = new Promise((resolve,reject)=>{
+    let fileLoaded = true;
+    
+    if(fileLoaded){
+        resolve("File Loaded");
+    }else{
+        reject("File Not loaded");
+    }
+});
+
+promise.then((value)=>console.log(value))
+        .catch((error)=>console.log(error));
+
+
+const promise2 = new Promise(resolve=>{
+    setTimeout(resolve,5000);
+})
+promise2.then(()=> console.log("Thank for waiting2"))
+
+
+const promise3 = time=>new Promise(resolve=>{
+    setTimeout(resolve,time);
+})
+promise3(3000).then(()=> console.log("Thank for waiting3"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+//await = makes an async function wait for a Promise
+// သူက ကတိတစ်ခုပေးပြီးမှ အလုပ်လုပ်မယ်
+// async function loadFile(){
+//     let fileLoaded=true;
+
+//     if(fileLoaded){
+//         return "File loaded";
+//     }else{
+//         throw "File Not loaded";
+//     }
+// }
+
+// loadFile().then(value =>console.log(value))
+//          .catch(error=>console.log(error));
