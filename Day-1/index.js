@@ -1249,23 +1249,30 @@ console.log("END");
 //***********************day fifty-five start********************************************   
 //await = makes an async function wait for a Promise
 // သူက ကတိတစ်ခုပေးပြီးမှ အလုပ်လုပ်မယ်
-async function loadFile(){
-    let fileLoaded=false;
+// async function loadFile(){
+//     let fileLoaded=false;
 
-    if(fileLoaded){
-        return "File loaded";
-    }else{
-        throw "File Not loaded";
-    }
-}
+//     if(fileLoaded){
+//         return "File loaded";
+//     }else{
+//         throw "File Not loaded";
+//     }
+// }
 
-async function startProcess(){
-   try{
-    let message = await loadFile();
-    console.log(message);
-   }catch(error){
-    console.log(error);
-   }
-}
+// async function startProcess(){
+//    try{
+//     let message = await loadFile();
+//     console.log(message);
+//    }catch(error){
+//     console.log(error);
+//    }
+// }
+// startProcess();
 
-startProcess();
+//***********************day fifty-six start********************************************   
+// index.html ဖိုင်ထဲမှာ script ဖိုင်ထဲမှာ type="module" ဆိုတာ ထည့်ချိတ်ဖို့လိုပါသည်။
+import {PI,getCircumference,getArea} from "./math_util.js"
+console.log(PI);
+
+let circumference = getCircumference(10);
+console.log(circumference);
