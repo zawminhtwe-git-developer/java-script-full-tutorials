@@ -1272,8 +1272,21 @@ console.log("END");
 //***********************day fifty-six start********************************************   
 // index.html ဖိုင်ထဲမှာ script ဖိုင်ထဲမှာ type="module" ဆိုတာ ထည့်ချိတ်ဖို့လိုပါသည်။
 // import {PI,getCircumference,getArea} from "./math_util.js"
-import * as MathUtil from "./math_util.js"
-console.log(MathUtil.PI);
+// import * as MathUtil from "./math_util.js"
+// console.log(MathUtil.PI);
 
-let circumference = MathUtil.getCircumference(10);
-console.log(circumference);
+// let circumference = MathUtil.getCircumference(10);
+// console.log(circumference);
+
+//***********************day fifty-seven start********************************************   
+// DOM = Document Object Model(API) Application Programming Interface
+//      An interface for changing the content of a page
+// console.log(document)
+// console.dir(document)
+// console.log(document.title)
+// console.log(document.URL)
+
+document.title = "Zaw Min Htwe";
+// document.location="https://www.google.com";
+document.body.style.backgroundColor = "skyblue";
+document.getElementById("myDiv").innerHTML = "Hello"
