@@ -1236,37 +1236,36 @@ console.log("END");
 //     }
 // }
 
- function loadFile(){
-    let fileLoaded =false;
-    if(fileLoaded){
-        return Promise.resolve("File Loaded")
-    }else{
-       return Promise.reject("File Not Loaded")
-    }
-}
-loadFile().then(value=>console.log(value)).catch(error=>console.log(error))
-
-
-
-
-
-
-
-
-
-
-
-//await = makes an async function wait for a Promise
-// သူက ကတိတစ်ခုပေးပြီးမှ အလုပ်လုပ်မယ်
-// async function loadFile(){
-//     let fileLoaded=true;
-
+//  function loadFile(){
+//     let fileLoaded =false;
 //     if(fileLoaded){
-//         return "File loaded";
+//         return Promise.resolve("File Loaded")
 //     }else{
-//         throw "File Not loaded";
+//        return Promise.reject("File Not Loaded")
 //     }
 // }
+// loadFile().then(value=>console.log(value)).catch(error=>console.log(error))
 
-// loadFile().then(value =>console.log(value))
-//          .catch(error=>console.log(error));
+//***********************day fifty-five start********************************************   
+//await = makes an async function wait for a Promise
+// သူက ကတိတစ်ခုပေးပြီးမှ အလုပ်လုပ်မယ်
+async function loadFile(){
+    let fileLoaded=false;
+
+    if(fileLoaded){
+        return "File loaded";
+    }else{
+        throw "File Not loaded";
+    }
+}
+
+async function startProcess(){
+   try{
+    let message = await loadFile();
+    console.log(message);
+   }catch(error){
+    console.log(error);
+   }
+}
+
+startProcess();
