@@ -1199,32 +1199,52 @@ console.log("END");
 //promise = object that encapsulates the result of an asynchronous operation 
 //          let asynchronous methods return values like synchronous methods
 //          "I Promise to return something in the future"
-const promise = new Promise((resolve,reject)=>{
-    let fileLoaded = true;
+// const promise = new Promise((resolve,reject)=>{
+//     let fileLoaded = true;
     
+//     if(fileLoaded){
+//         resolve("File Loaded");
+//     }else{
+//         reject("File Not loaded");
+//     }
+// });
+
+// promise.then((value)=>console.log(value))
+//         .catch((error)=>console.log(error));
+
+
+// const promise2 = new Promise(resolve=>{
+//     setTimeout(resolve,5000);
+// })
+// promise2.then(()=> console.log("Thank for waiting2"))
+
+
+// const promise3 = time=>new Promise(resolve=>{
+//     setTimeout(resolve,time);
+// })
+// promise3(3000).then(()=> console.log("Thank for waiting3"))
+
+//***********************day fifty-four start********************************************   
+// async =make a function return a Promise
+
+// async function loadFile(){
+//     let fileLoaded =true;
+//     if(fileLoaded){
+//         return ("File Loaded")
+//     }else{
+//         throw("File Not Loaded")
+//     }
+// }
+
+ function loadFile(){
+    let fileLoaded =false;
     if(fileLoaded){
-        resolve("File Loaded");
+        return Promise.resolve("File Loaded")
     }else{
-        reject("File Not loaded");
+       return Promise.reject("File Not Loaded")
     }
-});
-
-promise.then((value)=>console.log(value))
-        .catch((error)=>console.log(error));
-
-
-const promise2 = new Promise(resolve=>{
-    setTimeout(resolve,5000);
-})
-promise2.then(()=> console.log("Thank for waiting2"))
-
-
-const promise3 = time=>new Promise(resolve=>{
-    setTimeout(resolve,time);
-})
-promise3(3000).then(()=> console.log("Thank for waiting3"))
-
-
+}
+loadFile().then(value=>console.log(value)).catch(error=>console.log(error))
 
 
 
