@@ -1271,8 +1271,9 @@ console.log("END");
 
 //***********************day fifty-six start********************************************   
 // index.html ဖိုင်ထဲမှာ script ဖိုင်ထဲမှာ type="module" ဆိုတာ ထည့်ချိတ်ဖို့လိုပါသည်။
-import {PI,getCircumference,getArea} from "./math_util.js"
-console.log(PI);
+// import {PI,getCircumference,getArea} from "./math_util.js"
+import * as MathUtil from "./math_util.js"
+console.log(MathUtil.PI);
 
-let circumference = getCircumference(10);
+let circumference = MathUtil.getCircumference(10);
 console.log(circumference);
