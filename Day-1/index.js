@@ -1320,8 +1320,43 @@ console.log("END");
 // let element = document.querySelector("[for]");
 // element.style.backgroundColor = "red";
 
-let elements = document.querySelectorAll("li");
-// console.log(elements)
-elements.forEach(element => {
-element.style.backgroundColor = "red";
-})
+// let elements = document.querySelectorAll("li");
+// // console.log(elements)
+// elements.forEach(element => {
+// element.style.backgroundColor = "red";
+// })
+
+//***********************day fifty-nine start********************************************   
+//.firstElementChild
+//.lastElementChild
+//.parentElement
+//.nextElementSibling
+//.previousElementSibling
+//.children[]
+//Array.from(.children)
+
+// let element = document.body;
+// // let children = element.firstElementChild;
+// let children = element.lastElementChild;// ဆိုရင် <script type="text/javascript" style="background-color: green;"> select လုပ်ထားတာပါ
+// // console.log(children);
+// children.style.backgroundColor = "green";
+
+let element = document.querySelector("#vegetables");
+// let children = element.firstElementChild;
+let parent = element.parentElement;// ဆိုရင် <script type="text/javascript" style="background-color: green;"> select လုပ်ထားတာပါ
+let sibling = element.nextElementSibling;// ဆိုရင် <script type="text/javascript" style="background-color: green;"> select လုပ်ထားတာပါ
+let sibling2 = element.previousElementSibling;// ဆိုရင် <script type="text/javascript" style="background-color: green;"> select လုပ်ထားတာပါ
+// console.log(children);
+parent.style.backgroundColor = "green";
+sibling.style.backgroundColor = "red";
+sibling2.style.backgroundColor = "white";
+
+let el = document.querySelector("#vegetables");
+let child = el.lastElementChild;
+let child2 = el.firstElementChild;
+child.style.backgroundColor = "blue";
+child2.style.backgroundColor = "gray";
+
+let language = document.querySelector("#language");
+let children= Array.from(language.children);
+children.forEach(language1 => language1.style.backgroundColor ="white");
