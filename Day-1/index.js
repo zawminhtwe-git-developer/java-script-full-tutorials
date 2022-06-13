@@ -1382,13 +1382,35 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 
 
 //***********************day sixty-one start********************************************   
-const title = document.getElementById("myTitle");
-title.style.backgroundColor ="rgb(50,200,250)";
-title.style.backgroundColor ="#222222";
-title.style.backgroundColor ="green";
-title.style.color="rgb(50,200,250)";
-title.style.fontFamily ="consolas";
-title.style.textAlign ="center";
-title.style.border = "2px solid";
-title.style.display = "block";
+// const title = document.getElementById("myTitle");
+// title.style.backgroundColor ="rgb(50,200,250)";
+// title.style.backgroundColor ="#222222";
+// title.style.backgroundColor ="green";
+// title.style.color="rgb(50,200,250)";
+// title.style.fontFamily ="consolas";
+// title.style.textAlign ="center";
+// title.style.border = "2px solid";
+// title.style.display = "block";
 
+//***********************day sixty-two start********************************************   
+// const element = document.getElementById("myButton");
+// const element = document.body;
+// const element = document.getElementById("myText");
+const element = document.getElementById("myDiv");
+
+
+// element.onclick = doSomething;
+// element.onload = doSomething;
+// element.onchange = doSomething;
+// element.onmouseover = doSomething;
+// element.onmouseout = doSomethingElse;
+element.onmousedown = doSomething;
+element.onmouseup = doSomethingElse;
+
+function doSomething(){
+  element.style.backgroundColor = "green";
+}
+
+function doSomethingElse(){
+    element.style.backgroundColor = "red";
+  }
