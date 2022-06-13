@@ -1286,7 +1286,42 @@ console.log("END");
 // console.log(document.title)
 // console.log(document.URL)
 
-document.title = "Zaw Min Htwe";
+// document.title = "Zaw Min Htwe";
 // document.location="https://www.google.com";
-document.body.style.backgroundColor = "skyblue";
-document.getElementById("myDiv").innerHTML = "Hello"
+// document.body.style.backgroundColor = "skyblue";
+// document.getElementById("myDiv").innerHTML = "Hello"
+
+//***********************day fifty-eight start********************************************   
+// let element = document.getElementById("myTitle");
+// element.style.backgroundColor = "lightgreen";
+
+//<input type="radio" name="fruits" value="apple" checked="checked">
+//let fruits = document.getElementsByName("fruits"); //name="fruits"
+// console.log(fruits[0])
+
+// fruits.forEach(fruit => {
+//     if(fruit.checked){
+//         console.log(fruit.value)
+//     }
+// })
+
+// let vegetables = document.getElementsByTagName("li"); // <li>Carrots</li>
+// vegetables[0].style.backgroundColor="green";
+// console.log(vegetables[0])
+
+// let desserts = document.getElementsByClassName("desserts");
+// desserts[1].style.backgroundColor = "red";
+
+
+// querySelector က တစ်ခုပဲ ဖမ်းပေးပါတယ်
+// let element = document.querySelector("#myTitle");
+// let element = document.querySelector("li");
+// let element = document.querySelector(".desserts");
+// let element = document.querySelector("[for]");
+// element.style.backgroundColor = "red";
+
+let elements = document.querySelectorAll("li");
+// console.log(elements)
+elements.forEach(element => {
+element.style.backgroundColor = "red";
+})
