@@ -1372,13 +1372,23 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 // nameTag.textContent = window.prompt("Enter your name:");
 // document.body.append(nameTag);
 
-const myList =document.querySelector("#language");
-const listItem = document.createElement("li");
-listItem.textContent = "Excel";
+// const myList =document.querySelector("#language");
+// const listItem = document.createElement("li");
+// listItem.textContent = "Excel";
 //myList.append(listItem);// နောက်ဆုံးကနေထည့်တယ်
 // myList.prepend(listItem);// ရှေ့ဆုံးကနေ ထည့်တယ်
 
-myList.insertBefore(listItem,myList.getElementsByTagName("li")[0]);
+// myList.insertBefore(listItem,myList.getElementsByTagName("li")[0]);
 
 
+//***********************day sixty-one start********************************************   
+const title = document.getElementById("myTitle");
+title.style.backgroundColor ="rgb(50,200,250)";
+title.style.backgroundColor ="#222222";
+title.style.backgroundColor ="green";
+title.style.color="rgb(50,200,250)";
+title.style.fontFamily ="consolas";
+title.style.textAlign ="center";
+title.style.border = "2px solid";
+title.style.display = "block";
 
