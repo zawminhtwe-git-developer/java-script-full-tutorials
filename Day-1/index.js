@@ -1340,7 +1340,7 @@ console.log("END");
 // let children = element.lastElementChild;// ဆိုရင် <script type="text/javascript" style="background-color: green;"> select လုပ်ထားတာပါ
 // // console.log(children);
 // children.style.backgroundColor = "green";
-
+/*
 let element = document.querySelector("#vegetables");
 // let children = element.firstElementChild;
 let parent = element.parentElement;// ဆိုရင် <script type="text/javascript" style="background-color: green;"> select လုပ်ထားတာပါ
@@ -1360,3 +1360,25 @@ child2.style.backgroundColor = "gray";
 let language = document.querySelector("#language");
 let children= Array.from(language.children);
 children.forEach(language1 => language1.style.backgroundColor ="white");
+*/
+
+//***********************day sixty start********************************************   
+//add / change HTML elements
+// .innerHTML (vulnerable to XSS attacks)
+// .textContent (more secure)
+
+// const nameTag = document.createElement("h1");
+// nameTag.innerHTML = window.prompt("Enter your name:");//not recommended
+// nameTag.textContent = window.prompt("Enter your name:");
+// document.body.append(nameTag);
+
+const myList =document.querySelector("#language");
+const listItem = document.createElement("li");
+listItem.textContent = "Excel";
+//myList.append(listItem);// နောက်ဆုံးကနေထည့်တယ်
+// myList.prepend(listItem);// ရှေ့ဆုံးကနေ ထည့်တယ်
+
+myList.insertBefore(listItem,myList.getElementsByTagName("li")[0]);
+
+
+
