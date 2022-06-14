@@ -1430,14 +1430,44 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 // }
 
 //***********************day sixty-four start********************************************   
-const myButton = document.getElementById("myButton");
-const myImg = document.getElementById("myImg");
-//myImg.style.visibility == "hidden" =none
-//myImg.style.visibility == "visible" = block
-myButton.addEventListener("click",() => {
-  if(myImg.style.display == "none"){
-    myImg.style.display = "block";
-  }else{
-    myImg.style.display = "none";
+// const myButton = document.getElementById("myButton");
+// const myImg = document.getElementById("myImg");
+// //myImg.style.visibility == "hidden" =none
+// //myImg.style.visibility == "visible" = block
+// myButton.addEventListener("click",() => {
+//   if(myImg.style.display == "none"){
+//     myImg.style.display = "block";
+//   }else{
+//     myImg.style.display = "none";
+//   }
+// })
+
+//***********************day sixty-five start********************************************   
+
+const myDiv = document.getElementById("myDiv")
+window.addEventListener("keydown",move);
+let x= 0;
+let y=0;
+
+function move(event){
+  switch(event.key){
+    case "ArrowDown":
+      y+=5;
+      myDiv.style.top = y + "px";
+      break;
+    case "ArrowUp":
+      y-=5;
+      myDiv.style.top = y + "px";
+      break;
+    case "ArrowRight":
+      x+=5;
+      myDiv.style.left = x + "px";
+      break;
+    case "ArrowLeft":
+      x-=5;
+      myDiv.style.left = x + "px";
+      break;
+    default:
+      break;
   }
-})
+}
