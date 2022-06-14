@@ -1444,30 +1444,130 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 
 //***********************day sixty-five start********************************************   
 
-const myDiv = document.getElementById("myDiv")
-window.addEventListener("keydown",move);
-let x= 0;
-let y=0;
+// const myDiv = document.getElementById("myDiv")
+// window.addEventListener("keydown",move);
+// let x= 0;
+// let y=0;
 
-function move(event){
-  switch(event.key){
-    case "ArrowDown":
-      y+=5;
-      myDiv.style.top = y + "px";
-      break;
-    case "ArrowUp":
-      y-=5;
-      myDiv.style.top = y + "px";
-      break;
-    case "ArrowRight":
-      x+=5;
-      myDiv.style.left = x + "px";
-      break;
-    case "ArrowLeft":
-      x-=5;
-      myDiv.style.left = x + "px";
-      break;
-    default:
-      break;
+// function move(event){
+//   switch(event.key){
+//     case "ArrowDown":
+//       y+=5;
+//       myDiv.style.top = y + "px";
+//       break;
+//     case "ArrowUp":
+//       y-=5;
+//       myDiv.style.top = y + "px";
+//       break;
+//     case "ArrowRight":
+//       x+=5;
+//       myDiv.style.left = x + "px";
+//       break;
+//     case "ArrowLeft":
+//       x-=5;
+//       myDiv.style.left = x + "px";
+//       break;
+//     default:
+//       break;
+//   }
+// }
+
+//***********************day sixty-six start********************************************   
+//animations
+const myButton = document.getElementById("myButton");
+const myAmimation = document.getElementById("myDiv");
+
+myButton.addEventListener("click",begin);
+
+function begin(){
+  let timerId = null;
+  let x =0;
+  let y=0;
+  let degrees =0;
+  let scaleX =1; //1=100%
+  let scaleY =1; //1=100%
+  timerId = setInterval(frame,5);
+
+
+  // animation horizontal
+  // function frame(){
+  //   if(x >= 400){
+  //     clearInterval(timerId);
+
+  //   }else{
+  //     x+=1;
+  //     myAmimation.style.left = x + "px";
+  //   }
+  // }
+
+  
+  // animation vertical
+  // function frame(){
+  //   if(y >= 400){
+  //     clearInterval(timerId);
+
+  //   }else{
+  //     y+=1;
+  //     myAmimation.style.top = y + "px";
+  //   }
+  // }
+
+  
+  // animation triangle
+  // function frame(){
+  //   if(x >= 400 || y >=400){
+  //     clearInterval(timerId);
+
+  //   }else{
+  //     y+=1;
+  //     x+=1;
+  //     myAmimation.style.top = y + "px";
+  //     myAmimation.style.left = x + "px";
+  //   }
+  // }
+  
+  // animation rotate
+  //   function frame(){
+  //   if(degrees >=360){
+  //     clearInterval(timerId)
+  //   }else{
+  //    degrees +=1;
+  //   //  myAmimation.style.transform= "rotateX("+degrees+"deg)";
+  //   //  myAmimation.style.transform= "rotateY("+degrees+"deg)";
+  //     myAmimation.style.transform= "rotateZ("+degrees+"deg)";
+  //   }
+  // }
+
+   // animation rotate-2
+  // function frame(){
+  //   if(x>=200 || y>=200){
+  //     clearInterval(timerId)
+  //   }else{
+  //    degrees +=5; // a little big speed for 5
+  //   x+=1;
+  //   y+=1;
+  //   myAmimation.style.left = x+"px";
+  //   myAmimation.style.top = y+"px";
+  //     myAmimation.style.transform= "rotateZ("+degrees+"deg)";
+  //   }
+  // }
+
+
+  // animation scaleXY
+  function frame(){
+    // if(scaleX >= 2 || scaleY >=2){ //အကြီးချဲ့
+    if(scaleX <=0.1  || scaleY <=0.1){
+      clearInterval(timerId)
+    }else{
+      // scaleX +=0.01;//အကြီးချဲ့
+      // scaleY +=0.01;//အကြီးချဲ့
+      scaleX -=0.01;
+      scaleY -=0.01;
+      myAmimation.style.transform = "scale("+scaleX+","+scaleY+")";
+    }
   }
+
+
 }
+
+
