@@ -1396,7 +1396,7 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 // const element = document.getElementById("myButton");
 // const element = document.body;
 // const element = document.getElementById("myText");
-const element = document.getElementById("myDiv");
+//const element = document.getElementById("myDiv");
 
 
 // element.onclick = doSomething;
@@ -1404,13 +1404,27 @@ const element = document.getElementById("myDiv");
 // element.onchange = doSomething;
 // element.onmouseover = doSomething;
 // element.onmouseout = doSomethingElse;
-element.onmousedown = doSomething;
-element.onmouseup = doSomethingElse;
+// element.onmousedown = doSomething;
+// element.onmouseup = doSomethingElse;
 
-function doSomething(){
-  element.style.backgroundColor = "green";
+// function doSomething(){
+//   element.style.backgroundColor = "green";
+// }
+
+// function doSomethingElse(){
+//     element.style.backgroundColor = "red";
+//   }
+
+//***********************day sixty-three start********************************************   
+//addEventLisstener(event,function,useCapture)
+
+const innerDiv = document.getElementById("innerDiv");
+const outerDiv = document.getElementById("outerDiv");
+
+innerDiv.addEventListener("click",changeBlue);
+outerDiv.addEventListener("click",changeBlue,true);
+
+function changeBlue(){
+  alert (`You selected ${this.id}`);
+  this.style.backgroundColor = "red"
 }
-
-function doSomethingElse(){
-    element.style.backgroundColor = "red";
-  }
