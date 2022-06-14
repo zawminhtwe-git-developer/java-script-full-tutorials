@@ -1,4 +1,4 @@
-#innerDiv{
+/* #innerDiv{
     background-color: aqua;
     width: 100px;
     height: 100px;
@@ -8,4 +8,8 @@
     background-color: aqua;
     width: 200px;
     height: 200px;
+} */
+
+#myImg{
+    width: 500px;
 }

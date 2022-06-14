@@ -1418,13 +1418,26 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 //***********************day sixty-three start********************************************   
 //addEventLisstener(event,function,useCapture)
 
-const innerDiv = document.getElementById("innerDiv");
-const outerDiv = document.getElementById("outerDiv");
+// const innerDiv = document.getElementById("innerDiv");
+// const outerDiv = document.getElementById("outerDiv");
 
-innerDiv.addEventListener("click",changeBlue);
-outerDiv.addEventListener("click",changeBlue,true);
+// innerDiv.addEventListener("click",changeBlue);
+// outerDiv.addEventListener("click",changeBlue,true);
 
-function changeBlue(){
-  alert (`You selected ${this.id}`);
-  this.style.backgroundColor = "red"
-}
+// function changeBlue(){
+//   alert (`You selected ${this.id}`);
+//   this.style.backgroundColor = "red"
+// }
+
+//***********************day sixty-four start********************************************   
+const myButton = document.getElementById("myButton");
+const myImg = document.getElementById("myImg");
+//myImg.style.visibility == "hidden" =none
+//myImg.style.visibility == "visible" = block
+myButton.addEventListener("click",() => {
+  if(myImg.style.display == "none"){
+    myImg.style.display = "block";
+  }else{
+    myImg.style.display = "none";
+  }
+})
