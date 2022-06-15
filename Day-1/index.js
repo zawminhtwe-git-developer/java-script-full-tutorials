@@ -1474,19 +1474,19 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 
 //***********************day sixty-six start********************************************   
 //animations
-const myButton = document.getElementById("myButton");
-const myAmimation = document.getElementById("myDiv");
+// const myButton = document.getElementById("myButton");
+// const myAmimation = document.getElementById("myDiv");
 
-myButton.addEventListener("click",begin);
+// myButton.addEventListener("click",begin);
 
-function begin(){
-  let timerId = null;
-  let x =0;
-  let y=0;
-  let degrees =0;
-  let scaleX =1; //1=100%
-  let scaleY =1; //1=100%
-  timerId = setInterval(frame,5);
+// function begin(){
+//   let timerId = null;
+//   let x =0;
+//   let y=0;
+//   let degrees =0;
+//   let scaleX =1; //1=100%
+//   let scaleY =1; //1=100%
+//   timerId = setInterval(frame,5);
 
 
   // animation horizontal
@@ -1554,20 +1554,82 @@ function begin(){
 
 
   // animation scaleXY
-  function frame(){
+  // function frame(){
     // if(scaleX >= 2 || scaleY >=2){ //အကြီးချဲ့
-    if(scaleX <=0.1  || scaleY <=0.1){
-      clearInterval(timerId)
-    }else{
+    // if(scaleX <=0.1  || scaleY <=0.1){
+      // clearInterval(timerId)
+    // }else{
       // scaleX +=0.01;//အကြီးချဲ့
       // scaleY +=0.01;//အကြီးချဲ့
-      scaleX -=0.01;
-      scaleY -=0.01;
-      myAmimation.style.transform = "scale("+scaleX+","+scaleY+")";
-    }
-  }
+//       scaleX -=0.01;
+//       scaleY -=0.01;
+//       myAmimation.style.transform = "scale("+scaleX+","+scaleY+")";
+//     }
+//   }
 
 
+// }
+
+//***********************day sixty-seven start********************************************   
+// cookie = a small text file stored on your computer 
+//          used to remember information 
+//          about the user saved in name=value pairs
+
+// console.log(navigator.cookieEnabled);
+// document.cookie = "firstName=Zaw; expires=Sun,1 January 2030 12:00:00 UTC; path=/"
+// document.cookie = "lastName=Min Htwe; expires=Sun,1 January 2030 12:00:00 UTC; path=/"
+// console.log(document.cookie)
+
+// setCookie("email","zaw@gmail.com",365);
+// console.log(document.cookie)
+// deleteCookie("firstName");
+// deleteCookie("lastName");
+// console.log(document.cookie)
+
+// setCookie("firstName","Zaw Min",365)
+// setCookie("lastName","Htwe",365)
+
+// console.log(getCookie("firstName"))
+// console.log(getCookie("lastName"))
+
+const firstText = document.querySelector("#firstText");
+const lastText = document.querySelector("#lastText");
+const submitBtn = document.querySelector("#submitBtn");
+const cookieBtn = document.querySelector("#cookieBtn");
+
+submitBtn.addEventListener("click",()=>{
+  setCookie("firstName",firstText.value,365);
+  setCookie("lastName",lastText.value,365);
+  firstText.value="";
+  lastText.value="";
+})
+
+cookieBtn.addEventListener("click",()=>{
+ firstText.value = getCookie("firstName")
+ lastText.value = getCookie("lastName")
+})
+
+
+
+function setCookie(name,value,daysToLive){
+  const date = new Date();
+  date.setTime(date.getTime() + daysToLive * 24 *60*60*10000);
+  let expires = "expires="+ date.toUTCString();
+  document.cookie = `${name}=${value}; ${expires}; path=/`;
 }
 
+function deleteCookie(name){
+  setCookie(name,null,null);
+}
 
+function getCookie(name){
+  const cDecoded = decodeURIComponent(document.cookie);
+  const cArray =cDecoded.split("; ");
+  let result=null;
+  cArray.forEach(element =>{
+    if(element.indexOf(name)==0){
+      result = element.substring(name.length +1)
+    }
+  })
+  return result;
+}
