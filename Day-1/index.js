@@ -1592,44 +1592,104 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 // console.log(getCookie("firstName"))
 // console.log(getCookie("lastName"))
 
-const firstText = document.querySelector("#firstText");
-const lastText = document.querySelector("#lastText");
-const submitBtn = document.querySelector("#submitBtn");
-const cookieBtn = document.querySelector("#cookieBtn");
+// const firstText = document.querySelector("#firstText");
+// const lastText = document.querySelector("#lastText");
+// const submitBtn = document.querySelector("#submitBtn");
+// const cookieBtn = document.querySelector("#cookieBtn");
 
-submitBtn.addEventListener("click",()=>{
-  setCookie("firstName",firstText.value,365);
-  setCookie("lastName",lastText.value,365);
-  firstText.value="";
-  lastText.value="";
-})
+// submitBtn.addEventListener("click",()=>{
+//   setCookie("firstName",firstText.value,365);
+//   setCookie("lastName",lastText.value,365);
+//   firstText.value="";
+//   lastText.value="";
+// })
 
-cookieBtn.addEventListener("click",()=>{
- firstText.value = getCookie("firstName")
- lastText.value = getCookie("lastName")
-})
+// cookieBtn.addEventListener("click",()=>{
+//  firstText.value = getCookie("firstName")
+//  lastText.value = getCookie("lastName")
+// })
 
 
 
-function setCookie(name,value,daysToLive){
-  const date = new Date();
-  date.setTime(date.getTime() + daysToLive * 24 *60*60*10000);
-  let expires = "expires="+ date.toUTCString();
-  document.cookie = `${name}=${value}; ${expires}; path=/`;
-}
+// function setCookie(name,value,daysToLive){
+//   const date = new Date();
+//   date.setTime(date.getTime() + daysToLive * 24 *60*60*10000);
+//   let expires = "expires="+ date.toUTCString();
+//   document.cookie = `${name}=${value}; ${expires}; path=/`;
+// }
 
-function deleteCookie(name){
-  setCookie(name,null,null);
-}
+// function deleteCookie(name){
+//   setCookie(name,null,null);
+// }
 
-function getCookie(name){
-  const cDecoded = decodeURIComponent(document.cookie);
-  const cArray =cDecoded.split("; ");
-  let result=null;
-  cArray.forEach(element =>{
-    if(element.indexOf(name)==0){
-      result = element.substring(name.length +1)
-    }
-  })
-  return result;
+// function getCookie(name){
+//   const cDecoded = decodeURIComponent(document.cookie);
+//   const cArray =cDecoded.split("; ");
+//   let result=null;
+//   cArray.forEach(element =>{
+//     if(element.indexOf(name)==0){
+//       result = element.substring(name.length +1)
+//     }
+//   })
+//   return result;
+// }
+
+//***********************day sixty-eight start********************************************   
+const timeDisplay =document.querySelector("#timeDisplay");
+const startBtn =document.querySelector("#startBtn");
+const pauseBtn =document.querySelector("#pauseBtn");
+const resetBtn =document.querySelector("#resetBtn");
+
+let startTime =0;
+let elapsedTime=0;
+let currentTime=0;
+let paused = true;
+let intervalId;
+let hrs =0;
+let mins =0;
+let secs =0;
+
+startBtn.addEventListener("click", ()=>{
+  if(paused){
+    paused = false;
+    startTime = Date.now() - elapsedTime;
+    intervalId = setInterval(updateTime,75);
+  }
+});
+pauseBtn.addEventListener("click",()=>{
+  if(!paused){
+    paused = true;
+    elapsedTime = Date.now() - startTime;
+    clearInterval(intervalId);
+  }
+});
+resetBtn.addEventListener("click",()=>{
+  paused = true;
+  clearInterval(intervalId);
+   startTime =0;
+   elapsedTime=0;
+   currentTime=0;
+   hrs =0;
+   mins =0;
+   secs =0;
+
+  timeDisplay.textContent = "00:00:00";
+});
+
+function updateTime(){
+  elapsedTime = Date.now() - startTime;
+
+  secs = Math.floor((elapsedTime/1000) % 60);
+  mins = Math.floor((elapsedTime/(1000 * 60)) % 60);
+  hrs = Math.floor((elapsedTime/(1000 * 60 * 60)) % 60);
+
+  secs=pad(secs);
+  mins=pad(mins);
+  hrs=pad(hrs);
+
+  timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
+
+  function pad(unit){
+    return (("0") + unit).length > 2 ? unit : "0" + unit;
+  }
 }
