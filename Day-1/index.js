@@ -1697,7 +1697,7 @@ function updateTime(){
 
 //***********************day sixty-nine start********************************************   
 //the date object is used to work with dates & times
-let date = new Date();
+// let date = new Date();
 // let date = new Date(0);
 // let date = new Date(2023,0,1,0,1,1,1);
 
@@ -1722,22 +1722,52 @@ date.setFullYear(2013);
 
 // console.log(date)
 // date = date.toLocaleString();
-document.getElementById("date").innerHTML = formatTime(date);
-console.log(date)
+// document.getElementById("date").innerHTML = formatTime(date);
+// console.log(date)
 
-function formatDate(date){
-  let year = date.getFullYear();
-  let month = date.getMonth();
-  let day = date.getDate();
-  return `${month}/${day}/${year}`;
-}
+// function formatDate(date){
+//   let year = date.getFullYear();
+//   let month = date.getMonth();
+//   let day = date.getDate();
+//   return `${month}/${day}/${year}`;
+// }
 
-function formatTime(date){
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  let amOrPm = hours >= 12 ? "PM" :"AM";
-  hours = (hours % 12) || 12;
-  return `${hours}/${minutes}/${seconds} ${amOrPm}`;
+// function formatTime(date){
+//   let hours = date.getHours();
+//   let minutes = date.getMinutes();
+//   let seconds = date.getSeconds();
+//   let amOrPm = hours >= 12 ? "PM" :"AM";
+//   hours = (hours % 12) || 12;
+//   return `${hours}/${minutes}/${seconds} ${amOrPm}`;
 
+// }
+
+//***********************day seventy start********************************************   
+// window = interface used to talk to the web browser the dom is a property of the window
+// console.dir(window);// to get window properties
+// console.log(window.innerHeight);
+// console.log(window.innerWidth); 
+// console.log(window.scrollY)
+// console.log(window.scrollX)
+
+// console.log(window.location.href);
+// window.location.href = "https://www.kachinlongyi.com";
+// console.log(window.location.hostname);
+// console.log(window.location.pathname);
+
+const myButton = document.querySelector("#myButton");
+
+// myButton.addEventListener("click",()=> window.open("https://www.kachinlongyi.com"));//new page
+// myButton.addEventListener("click",()=> window.close());
+// myButton.addEventListener("click",()=> window.print());//new page
+
+// window.alert("Hello");
+// window.confirm("Press Ok to continute");
+
+let age = window.prompt("Enterr your age");
+if(age < 18){
+  window.alert("You must be 18+ to visit this site")
+  window.close();
+}else{
+  window.open("https://www.kachinlongyi.com");
 }
