@@ -1635,7 +1635,7 @@ children.forEach(language1 => language1.style.backgroundColor ="white");
 // }
 
 //***********************day sixty-eight start********************************************   
-const timeDisplay =document.querySelector("#timeDisplay");
+/*const timeDisplay =document.querySelector("#timeDisplay");
 const startBtn =document.querySelector("#startBtn");
 const pauseBtn =document.querySelector("#pauseBtn");
 const resetBtn =document.querySelector("#resetBtn");
@@ -1692,4 +1692,52 @@ function updateTime(){
   function pad(unit){
     return (("0") + unit).length > 2 ? unit : "0" + unit;
   }
+}*/
+
+
+//***********************day sixty-nine start********************************************   
+//the date object is used to work with dates & times
+let date = new Date();
+// let date = new Date(0);
+// let date = new Date(2023,0,1,0,1,1,1);
+
+/*let year = date.getFullYear();
+let dayOfMonth = date.getDate();
+let dayOfWeek = date.getDay();
+let month = date.getMonth();
+let hour = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+let ms = date.getMilliseconds();
+
+
+date.setFullYear(2013);
+ date.setDate(31);
+ date.setMonth(11);
+ date.setHours(23);
+ date.setMinutes(1);
+ date.setSeconds(30);
+ date.setMilliseconds(10);
+*/
+
+// console.log(date)
+// date = date.toLocaleString();
+document.getElementById("date").innerHTML = formatTime(date);
+console.log(date)
+
+function formatDate(date){
+  let year = date.getFullYear();
+  let month = date.getMonth();
+  let day = date.getDate();
+  return `${month}/${day}/${year}`;
+}
+
+function formatTime(date){
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let amOrPm = hours >= 12 ? "PM" :"AM";
+  hours = (hours % 12) || 12;
+  return `${hours}/${minutes}/${seconds} ${amOrPm}`;
+
 }
