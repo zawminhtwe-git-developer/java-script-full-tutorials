@@ -1755,7 +1755,7 @@ date.setFullYear(2013);
 // console.log(window.location.hostname);
 // console.log(window.location.pathname);
 
-const myButton = document.querySelector("#myButton");
+// const myButton = document.querySelector("#myButton");
 
 // myButton.addEventListener("click",()=> window.open("https://www.kachinlongyi.com"));//new page
 // myButton.addEventListener("click",()=> window.close());
@@ -1764,10 +1764,45 @@ const myButton = document.querySelector("#myButton");
 // window.alert("Hello");
 // window.confirm("Press Ok to continute");
 
-let age = window.prompt("Enterr your age");
-if(age < 18){
-  window.alert("You must be 18+ to visit this site")
-  window.close();
-}else{
-  window.open("https://www.kachinlongyi.com");
-}
+// let age = window.prompt("Enterr your age");
+// if(age < 18){
+//   window.alert("You must be 18+ to visit this site")
+//   window.close();
+// }else{
+//   window.open("https://www.kachinlongyi.com");
+// }
+
+//***********************day seventy start********************************************   
+// console.log(fetch('https://reqres.in/api/users'))
+
+// fetch('https://reqres.in/api/users')//api ကနေလှမ်းယူခြင်း
+// .then(res => res.json())//ရလာတဲ့ကောင်က object မပြန်လို့ json ပြောင်းပေး
+// .then(data => console.log(data)) // ပြောင်းပြီးရင် ထုတ်ပြခြင်း
+
+
+// fetch('https://reqres.in/api/users/23')//api ကနေလှမ်းယူတာမရှိရင် 404 ဖြစ်တယ်
+// .then(res => {
+//   if(res.ok){
+//     console.log('success')
+//   }else{
+//     console.log('Not success')
+//   }
+// })//ရလာတဲ့ကောင်က object မပြန်လို့ json ပြောင်းပေး
+// .then(data => console.log(data)) // ပြောင်းပြီးရင် ထုတ်ပြခြင်း
+// .catch(error => console.log('error'));
+
+fetch('https://reqres.in/api/users/',{
+  method:'POST',
+  headers:{
+    'Content-Type':'Application/json'
+  },
+  body:JSON.stringify({
+    neme:'User 1',
+    email:"zawminhtwe199475@gmail.com"
+  })
+})//api ကနေလှမ်းယူတာမရှိရင် 404 ဖြစ်တယ်
+.then(res => {
+  return res.json()
+})//ရလာတဲ့ကောင်က object မပြန်လို့ json ပြောင်းပေး
+.then(data => console.log(data)) // ပြောင်းပြီးရင် ထုတ်ပြခြင်း
+.catch(error => console.log('error'));
